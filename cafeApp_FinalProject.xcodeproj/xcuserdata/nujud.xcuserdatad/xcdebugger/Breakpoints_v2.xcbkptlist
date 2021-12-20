@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F230DEC3-454E-4A43-8DA5-B6F95A0288E0"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F0CB7A3-2ED0-453D-B7A3-95684A200441"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cafeApp_FinalProject/SignUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "SignUpViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "3F0CB7A3-2ED0-453D-B7A3-95684A200441 - 1e070250f933f426"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cafeApp_FinalProject.SignUpViewController.lastName.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "cafeApp_FinalProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nujud/Desktop/cafeApp_FinalProject/cafeApp_FinalProject/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "3F0CB7A3-2ED0-453D-B7A3-95684A200441 - 58305bff80750812"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cafeApp_FinalProject.SignUpViewController.lastName.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "cafeApp_FinalProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nujud/Desktop/cafeApp_FinalProject/cafeApp_FinalProject/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "3F0CB7A3-2ED0-453D-B7A3-95684A200441 - 80fdd22a1a67531e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cafeApp_FinalProject.SignUpViewController.lastName.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "cafeApp_FinalProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nujud/Desktop/cafeApp_FinalProject/cafeApp_FinalProject/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "3F0CB7A3-2ED0-453D-B7A3-95684A200441 - 975fb273675dda07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cafeApp_FinalProject.SignUpViewController.lastName.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "cafeApp_FinalProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nujud/Desktop/cafeApp_FinalProject/cafeApp_FinalProject/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "3F0CB7A3-2ED0-453D-B7A3-95684A200441 - fbf28b4c31f09b9f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cafeApp_FinalProject.SignUpViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; cafeApp_FinalProject.SignUpViewController"
+                  moduleName = "cafeApp_FinalProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nujud/Desktop/cafeApp_FinalProject/cafeApp_FinalProject/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "3F0CB7A3-2ED0-453D-B7A3-95684A200441 - c5fa08af6fa5e0d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cafeApp_FinalProject.SignUpViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;cafeApp_FinalProject.SignUpViewController&gt;"
+                  moduleName = "cafeApp_FinalProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nujud/Desktop/cafeApp_FinalProject/cafeApp_FinalProject/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
