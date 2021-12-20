@@ -89,8 +89,8 @@ class menuTableViewController: UITableViewController {
 
       // performSegue(withIdentifier: "detailsID", sender: nil)
         VC.titleCoffee = productList[indexPath.row].title!
-        
-     //       VC.imgDetiels = UIImage(named : productList[indexPath.row].image)
+        VC.priceCoffee = productList[indexPath.row].price!
+//        VC.imgDetiels = productList[indexPath.row].image!
         VC.descriptionCoffee = productList[indexPath.row].descrabition!
         self.navigationController?.show(VC, sender: true)
     }

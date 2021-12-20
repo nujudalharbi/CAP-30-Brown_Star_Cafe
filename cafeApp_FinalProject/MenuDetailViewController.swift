@@ -10,15 +10,15 @@ import UIKit
 class MenuDetailViewController: UIViewController {
     var titleCoffee = ""
     var descriptionCoffee  = ""
-//    var priceCoffee = 0
-//    var images = UIImage()
+    var priceCoffee = 0.0
+//    var images = ""
 //    var orderArr = [products]()
     override func viewDidLoad() {
         super.viewDidLoad()
         titDetiels.text = titleCoffee
         DescDetiels.text = descriptionCoffee
-//        imgDetiels.image = images
-//        priceDet.text = priceCoffee
+//        imgDetiels.image = String(images)
+        priceDet.text = String(priceCoffee)
     }
     @IBOutlet weak var imgDetiels: UIImageView!
     
@@ -30,6 +30,12 @@ class MenuDetailViewController: UIViewController {
     
     @IBOutlet weak var NoteTxt: UITextField!
     @IBAction func addBtn(_ sender: Any) {
+        
+        
+        
+        
+        
+        
     }
     @IBAction func noteDet(_ sender: Any) {
     }
