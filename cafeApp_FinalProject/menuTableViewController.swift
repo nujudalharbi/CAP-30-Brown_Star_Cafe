@@ -55,39 +55,44 @@ class menuTableViewController: UITableViewController {
     
 //  -------------------------------
     
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//
-//        return productList.count
-//    }
-//    
-//    
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductID")as! menuTableViewCell
-//        let pro : products
-//        pro = productList[indexPath.row]
-//        if let imageName = pro.image {
-//            let url = URL(string: imageName)
-//            URLSession.shared.dataTask(with: url!) { (data, _, _) in
-//                if let data = data {
-//                    DispatchQueue.main.async {
-//                        cell.imagesProduct.image = UIImage(data: data)
-//                    }
-//                }
-//            }.resume()
-//        }
-//        cell.titleProduct.text = pro.title
-//  
-//        return cell
-//       
-//    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        return productList.count
+    }
     
-//
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductID")as! menuTableViewCell
+        let pro : products
+        pro = productList[indexPath.row]
+        if let imageName = pro.image {
+            let url = URL(string: imageName)
+            URLSession.shared.dataTask(with: url!) { (data, _, _) in
+                if let data = data {
+                    DispatchQueue.main.async {
+                        cell.imagesProduct.image = UIImage(data: data)
+                    }
+                }
+            }.resume()
+        }
+        cell.titleProduct.text = pro.title
+       
+  
+        return cell
+       
+    }
+    
+//--------------------------------
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let VC = storyboard?.instantiateViewController(withIdentifier: "DetileID") as!  menuTableViewController
-//        VC.titDetiels  = productList[indexPath.row].title
-//        VC.= UIImage(named : orderArr[indexPath.row].image)
-//        VC.DescDetiels = productList[indexPath.row].describtion
-        self.navigationController?.pushViewController(VC, animated: true  )
+        let VC = storyboard?.instantiateViewController(withIdentifier: "DetileID") as! MenuDetailViewController
+
+      // performSegue(withIdentifier: "detailsID", sender: nil)
+        VC.titleCoffee = productList[indexPath.row].title!
+        
+     //       VC.imgDetiels = UIImage(named : productList[indexPath.row].image)
+        VC.descriptionCoffee = productList[indexPath.row].descrabition!
+        self.navigationController?.show(VC, sender: true)
     }
     
 }
