@@ -55,31 +55,31 @@ class menuTableViewController: UITableViewController {
     
 //  -------------------------------
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return productList.count
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductID")as! menuTableViewCell
-        let pro : products
-        pro = productList[indexPath.row]
-        if let imageName = pro.image {
-            let url = URL(string: imageName)
-            URLSession.shared.dataTask(with: url!) { (data, _, _) in
-                if let data = data {
-                    DispatchQueue.main.async {
-                        cell.imagesProduct.image = UIImage(data: data)
-                    }
-                }
-            }.resume()
-        }
-        cell.titleProduct.text = pro.title
-  
-        return cell
-       
-    }
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//
+//        return productList.count
+//    }
+//    
+//    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductID")as! menuTableViewCell
+//        let pro : products
+//        pro = productList[indexPath.row]
+//        if let imageName = pro.image {
+//            let url = URL(string: imageName)
+//            URLSession.shared.dataTask(with: url!) { (data, _, _) in
+//                if let data = data {
+//                    DispatchQueue.main.async {
+//                        cell.imagesProduct.image = UIImage(data: data)
+//                    }
+//                }
+//            }.resume()
+//        }
+//        cell.titleProduct.text = pro.title
+//  
+//        return cell
+//       
+//    }
     
 //
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
