@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class MenuDetailViewController: UIViewController {
     var titleCoffee = ""
@@ -29,14 +31,16 @@ class MenuDetailViewController: UIViewController {
     @IBOutlet weak var priceDet: UILabel!
     
     @IBOutlet weak var NoteTxt: UITextField!
+    
     @IBAction func addBtn(_ sender: Any) {
         
+        let dbRef = Firestore.firestore()
         
+        let order = ["title" : titDetiels.text! ,
+                     "noteOrder" : NoteTxt.text!]
+        dbRef.collection("Orders").addDocument(data: order)
         
-        
-        
-        
+        print ("added to DB")
     }
-    @IBAction func noteDet(_ sender: Any) {
-    }
+
 }

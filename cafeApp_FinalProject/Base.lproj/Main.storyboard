@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Hp-iK-ZoB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -239,7 +239,7 @@
         <!--Order Table View Controller-->
         <scene sceneID="zHd-cu-USh">
             <objects>
-                <tableViewController id="EUD-TY-sSp" customClass="OrderTableViewController" customModule="cafeApp_FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="OrderID" id="EUD-TY-sSp" customClass="OrderTableViewController" customModule="cafeApp_FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="ygv-hC-BmT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -304,22 +304,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ymT-Jz-Pxf">
-                                <rect key="frame" x="20" y="595" width="374" height="60"/>
+                                <rect key="frame" x="20" y="555" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Zut-f6-8oF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="noteDet:" destination="KJy-oN-cRg" eventType="editingDidEnd" id="Ass-9T-4UV"/>
-                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXe-Ih-BbI">
-                                <rect key="frame" x="60" y="724" width="294" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NT0-aE-RjE">
+                                <rect key="frame" x="20" y="655" width="374" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="khZ-Cc-nwu"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <action selector="addBtn:" destination="KJy-oN-cRg" eventType="touchUpInside" id="08p-A2-Owe"/>
+                                    <action selector="addBtn:" destination="KJy-oN-cRg" eventType="touchUpInside" id="sqz-O2-jIU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -334,17 +334,16 @@
                             <constraint firstItem="G2v-SN-lDA" firstAttribute="trailing" secondItem="Q20-Bn-uAF" secondAttribute="trailing" id="JSa-Xf-rm5"/>
                             <constraint firstItem="1vr-N7-yOJ" firstAttribute="leading" secondItem="Q20-Bn-uAF" secondAttribute="leading" id="Ppe-pa-V7s"/>
                             <constraint firstItem="eqI-Bd-Xrh" firstAttribute="leading" secondItem="Q20-Bn-uAF" secondAttribute="leading" constant="70" id="Qmr-4E-ybw"/>
-                            <constraint firstItem="ymT-Jz-Pxf" firstAttribute="top" secondItem="eqI-Bd-Xrh" secondAttribute="bottom" constant="80" id="Sxq-bh-ZS7"/>
+                            <constraint firstItem="ymT-Jz-Pxf" firstAttribute="top" secondItem="eqI-Bd-Xrh" secondAttribute="bottom" constant="40" id="Sxq-bh-ZS7"/>
+                            <constraint firstItem="Q20-Bn-uAF" firstAttribute="trailing" secondItem="NT0-aE-RjE" secondAttribute="trailing" constant="20" id="XJi-S6-MXb"/>
                             <constraint firstItem="eqI-Bd-Xrh" firstAttribute="top" secondItem="1vr-N7-yOJ" secondAttribute="bottom" constant="80" id="aLn-jG-Mpf"/>
+                            <constraint firstItem="NT0-aE-RjE" firstAttribute="top" secondItem="ymT-Jz-Pxf" secondAttribute="bottom" constant="40" id="cR4-3c-kOx"/>
                             <constraint firstItem="7Cv-tf-bgd" firstAttribute="bottom" secondItem="G2v-SN-lDA" secondAttribute="bottom" id="h3y-aV-Dc0"/>
-                            <constraint firstItem="Q20-Bn-uAF" firstAttribute="trailing" secondItem="SXe-Ih-BbI" secondAttribute="trailing" constant="60" id="hsk-f5-oMp"/>
-                            <constraint firstItem="Q20-Bn-uAF" firstAttribute="bottom" secondItem="SXe-Ih-BbI" secondAttribute="bottom" constant="52" id="kot-Hz-TQv"/>
-                            <constraint firstItem="SXe-Ih-BbI" firstAttribute="leading" secondItem="Q20-Bn-uAF" secondAttribute="leading" constant="60" id="l00-eO-YdQ"/>
                             <constraint firstItem="7Cv-tf-bgd" firstAttribute="leading" secondItem="Q20-Bn-uAF" secondAttribute="leading" id="n18-mY-fCQ"/>
                             <constraint firstItem="ymT-Jz-Pxf" firstAttribute="leading" secondItem="Q20-Bn-uAF" secondAttribute="leading" constant="20" id="rHc-Te-bBG"/>
                             <constraint firstItem="7Cv-tf-bgd" firstAttribute="top" secondItem="Q20-Bn-uAF" secondAttribute="top" constant="64" id="rzy-6e-5Ch"/>
+                            <constraint firstItem="NT0-aE-RjE" firstAttribute="leading" secondItem="Q20-Bn-uAF" secondAttribute="leading" constant="20" id="uIc-wZ-RIr"/>
                             <constraint firstItem="G2v-SN-lDA" firstAttribute="leading" secondItem="Q20-Bn-uAF" secondAttribute="leading" id="yhd-2M-4fW"/>
-                            <constraint firstItem="SXe-Ih-BbI" firstAttribute="top" secondItem="ymT-Jz-Pxf" secondAttribute="bottom" constant="69" id="ykT-2M-fvX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1lq-MA-AdR"/>
@@ -358,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbo-mP-8tX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6000" y="-573"/>
+            <point key="canvasLocation" x="6000.0000000000009" y="-573.21428571428567"/>
         </scene>
         <!--Item-->
         <scene sceneID="QOU-7B-Aoa">

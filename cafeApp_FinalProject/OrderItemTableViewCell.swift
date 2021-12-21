@@ -9,9 +9,12 @@ import UIKit
 
 class OrderItemTableViewCell: UITableViewCell {
 
+    var titleStr = ""
+    @IBOutlet weak var titleOrder: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        titleOrder.text = titleStr
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -52,8 +52,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     }
     let picker = UIImagePickerController()
     @IBAction func UploadImageArt(_ sender: UIButton) {
-//        
-//       present(picker.)
+//
+        present(picker , animated: true, completion: nil)
     }
   
 
