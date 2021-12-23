@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="550.72463768115949" y="278.57142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="DRo-kh-t1D">
             <objects>
-                <viewController id="gWL-o3-rmF" sceneMemberID="viewController">
+                <viewController id="gWL-o3-rmF" customClass="LoginViewController" customModule="cafeApp_FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V5a-qh-cxB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,6 +86,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="loginBtn:" destination="gWL-o3-rmF" eventType="touchUpInside" id="oJ0-4x-Lsu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oEt-96-Le1"/>
@@ -98,6 +101,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="p7x-Lh-STb"/>
+                    <connections>
+                        <outlet property="emailLogin" destination="oaA-oz-eeW" id="JaO-RZ-0LY"/>
+                        <outlet property="loginOutlet" destination="AGC-ad-2X0" id="nPl-Zf-NdB"/>
+                        <outlet property="passwordLogin" destination="Dt8-eX-Bfh" id="qpN-Bv-1LQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4D-L9-7yo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,6 +204,7 @@
                         <viewLayoutGuide key="safeArea" id="Kqb-VY-AmJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6CJ-GQ-Rgo"/>
                     <connections>
                         <outlet property="tabelNum" destination="ZyM-WC-zCn" id="dhi-7i-Yds"/>
                     </connections>
@@ -252,6 +261,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <gestureRecognizers/>
                             </tableViewCell>
                         </prototypes>
                         <connections>

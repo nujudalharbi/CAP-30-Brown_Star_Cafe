@@ -13,13 +13,13 @@ class MenuDetailViewController: UIViewController {
     var titleCoffee = ""
     var descriptionCoffee  = ""
     var priceCoffee = 0.0
-//    var images = ""
+    var images = ""
 //    var orderArr = [products]()
     override func viewDidLoad() {
         super.viewDidLoad()
         titDetiels.text = titleCoffee
         DescDetiels.text = descriptionCoffee
-//        imgDetiels.image = String(images)
+//       imgDetiels.image = UIImage(named: images)
         priceDet.text = String(priceCoffee)
     }
     @IBOutlet weak var imgDetiels: UIImageView!

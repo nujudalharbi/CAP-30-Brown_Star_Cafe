@@ -33,6 +33,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <gestureRecognizers/>
             <connections>
                 <outlet property="titleOrder" destination="kB3-Yv-l8f" id="Q5p-dp-A0S"/>
             </connections>

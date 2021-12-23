@@ -9,10 +9,9 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-struct item {
-    
-}
+
 class OrderTableViewController: UITableViewController {
+    var item = 0
     var orderArr = [products]()
     
     let dbStore = Firestore.firestore()
@@ -37,6 +36,7 @@ class OrderTableViewController: UITableViewController {
                     self.tableView.reloadData()
             }
         }
+        
     }
 
 
@@ -55,7 +55,21 @@ class OrderTableViewController: UITableViewController {
         return cell
     }
     
+//    @IBAction func tapAction(_ sender: Any) {
+//        print (",,,,,,,")
+//        let alert = UIAlertController(title : "Are you sure to delete ?!" , message: nil , preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "yes", style: .default, handler: {
+//           action in
+//            self.orderArr.remove(at : self.item)
+//            self.tableView.reloadData()
+//        }))
+//        alert.addAction(UIAlertAction(title: "no", style: .default, handler:{action in
+//
+//        } ))
+//        present(alert , animated: true , completion: nil)
+//    }
+    
 
-   
+    
 
 }

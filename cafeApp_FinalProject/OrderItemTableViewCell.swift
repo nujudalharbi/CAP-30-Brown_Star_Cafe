@@ -9,6 +9,7 @@ import UIKit
 
 class OrderItemTableViewCell: UITableViewCell {
 
+    
     var titleStr = ""
     @IBOutlet weak var titleOrder: UILabel!
     
