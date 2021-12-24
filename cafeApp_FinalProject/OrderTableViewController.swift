@@ -55,6 +55,22 @@ class OrderTableViewController: UITableViewController {
         return cell
     }
     
+    
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            orderArr.remove(at: indexPath.row)
+            Database.database().reference(withPath: "Orders").child("title").removeValue(){ Error , ref in
+                
+            }
+            tableView.reloadData()
+           
+    }
+    
+    
+    
+    
 //    @IBAction func tapAction(_ sender: Any) {
 //        print (",,,,,,,")
 //        let alert = UIAlertController(title : "Are you sure to delete ?!" , message: nil , preferredStyle: .alert)
@@ -72,4 +88,5 @@ class OrderTableViewController: UITableViewController {
 
     
 
+}
 }

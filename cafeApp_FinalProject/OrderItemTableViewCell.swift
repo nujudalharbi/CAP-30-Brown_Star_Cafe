@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseDatabase
 
 class OrderItemTableViewCell: UITableViewCell {
 
-    
+    let db = Database.database().reference()
     var titleStr = ""
     @IBOutlet weak var titleOrder: UILabel!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
