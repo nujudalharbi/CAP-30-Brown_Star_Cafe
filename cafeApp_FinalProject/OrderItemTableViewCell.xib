@@ -25,16 +25,26 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fk2-KK-8kV">
+                        <rect key="frame" x="307" y="45" width="52" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.84322648190000005" green="0.19785410740000001" blue="0.06291410368" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="kB3-Yv-l8f" secondAttribute="bottom" constant="41" id="5nC-J4-ZNC"/>
+                    <constraint firstItem="fk2-KK-8kV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="45" id="90Z-o0-GAj"/>
                     <constraint firstItem="kB3-Yv-l8f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="41" id="WRt-5G-gcj"/>
+                    <constraint firstAttribute="trailing" secondItem="fk2-KK-8kV" secondAttribute="trailing" constant="32" id="kYi-yY-i68"/>
                     <constraint firstItem="kB3-Yv-l8f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="u3C-Th-UGS"/>
+                    <constraint firstAttribute="bottom" secondItem="fk2-KK-8kV" secondAttribute="bottom" constant="44" id="uCA-TM-QrO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <gestureRecognizers/>
             <connections>
+                <outlet property="freeOrder" destination="fk2-KK-8kV" id="QDK-AO-ZoW"/>
                 <outlet property="titleOrder" destination="kB3-Yv-l8f" id="Q5p-dp-A0S"/>
             </connections>
             <point key="canvasLocation" x="168.84057971014494" y="75"/>

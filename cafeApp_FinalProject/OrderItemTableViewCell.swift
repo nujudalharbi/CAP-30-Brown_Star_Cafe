@@ -16,6 +16,7 @@ class OrderItemTableViewCell: UITableViewCell {
     @IBOutlet weak var titleOrder: UILabel!
 
     
+    @IBOutlet weak var freeOrder: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         titleOrder.text = titleStr

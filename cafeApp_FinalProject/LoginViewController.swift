@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginOutlet: UIButton!
     
     @IBOutlet weak var passwordLogin: UITextField!
+    @IBOutlet weak var lbStatus: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,14 +24,31 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtn(_ sender: Any) {
-        if let email = emailLogin.text , let pass = passwordLogin.text{
-            Auth.auth().signIn(withEmail: email, password: pass , completion: {
-                (user , error ) in
-                
-            })
         
-        }}
-    
- 
+        Auth.auth().signIn(withEmail: emailLogin.text!, password: passwordLogin.text!) { result , error  in
+                   if (error == nil){
+                       let detailVc = self.storyboard?.instantiateViewController(withIdentifier: "tabelID") as! tabelNumViewController
+                       self.navigationController?.show(detailVc, sender: self)
+                       print(result?.user.email ?? "")
+                       self.lbStatus.text = "successfully login"
 
+                   }else{
+                       
+                       print(error?.localizedDescription ?? "")
+                       self.lbStatus.text = "email or password is wrong"
+                       
+                   }
+               }
+               
+           }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 }

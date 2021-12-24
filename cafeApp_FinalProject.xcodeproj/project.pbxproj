@@ -38,6 +38,7 @@
 		9178BEE8277094D90043CCA0 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178BEE7277094D90043CCA0 /* OrderTableViewController.swift */; };
 		9178BEEB277095110043CCA0 /* OrderItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178BEE9277095110043CCA0 /* OrderItemTableViewCell.swift */; };
 		9178BEEC277095110043CCA0 /* OrderItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9178BEEA277095110043CCA0 /* OrderItemTableViewCell.xib */; };
+		917DE8622775F4CF00CB2A88 /* ScanCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917DE8612775F4CF00CB2A88 /* ScanCodeViewController.swift */; };
 		918D5B662770A7F500AF69A6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918D5B652770A7F500AF69A6 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		9178BEE7277094D90043CCA0 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 		9178BEE9277095110043CCA0 /* OrderItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemTableViewCell.swift; sourceTree = "<group>"; };
 		9178BEEA277095110043CCA0 /* OrderItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderItemTableViewCell.xib; sourceTree = "<group>"; };
+		917DE8612775F4CF00CB2A88 /* ScanCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCodeViewController.swift; sourceTree = "<group>"; };
 		918D5B652770A7F500AF69A6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				91513BB5276F830A004FA9D6 /* AppDelegate.swift */,
 				91513BB7276F830A004FA9D6 /* SceneDelegate.swift */,
 				91513BB9276F830A004FA9D6 /* ViewController.swift */,
+				917DE8612775F4CF00CB2A88 /* ScanCodeViewController.swift */,
 				91513BE5276F8CF2004FA9D6 /* SignUpViewController.swift */,
 				916CEEC92773AD1D00F12D7E /* LoginViewController.swift */,
 				916DC53A27746BDA008D5609 /* ImageCellCollectionViewCell.swift */,
@@ -230,6 +233,7 @@
 				916DC53B27746BDA008D5609 /* ImageCellCollectionViewCell.swift in Sources */,
 				91513C15276FA45C004FA9D6 /* menuTableViewCell.swift in Sources */,
 				91513BFF276F9C63004FA9D6 /* tabelNumViewController.swift in Sources */,
+				917DE8622775F4CF00CB2A88 /* ScanCodeViewController.swift in Sources */,
 				91513C12276FA3D3004FA9D6 /* productItem.swift in Sources */,
 				9178BEEB277095110043CCA0 /* OrderItemTableViewCell.swift in Sources */,
 				91513BB8276F830A004FA9D6 /* SceneDelegate.swift in Sources */,
@@ -387,8 +391,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = cafeApp_FinalProject/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Can I use the camera ?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -399,7 +405,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.google.cafeApp-FinalProject";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.cafeApp-FinalProject890";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -414,8 +420,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = cafeApp_FinalProject/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Can I use the camera ?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -426,7 +434,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.google.cafeApp-FinalProject";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.cafeApp-FinalProject890";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

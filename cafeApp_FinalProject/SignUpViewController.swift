@@ -23,36 +23,36 @@ class SignUpViewController: UIViewController {
     @IBAction func addBtnAction(_ sender: Any) {
         
         
-   
-                    let userName1 = firstName.text!
-                    let userName2 = lastName.text!
-//                    let pass = passWord.text!
-//                    let email = emailLabel.text!
-                    
-                    //        Create the user
-        Auth.auth().createUser(withEmail: emailLabel.text!, password: passWord.text!)
-        { result , error in
+        let userName1 = firstName.text!
+        let userName2 = lastName.text!
+        Auth.auth().createUser(withEmail: emailLabel.text!, password: passWord.text!) { result , error  in
+//            Check the result and let them in
             
-            
-//            check the result and let them in
             
             if (error == nil){
-                
-                print (result?.user.email ?? "no email" )
-                
-            }else {
-                
-                print (error?.localizedDescription ?? "" )
-            }
+                let detailVc = self.storyboard?.instantiateViewController(withIdentifier: "tabelID") as! tabelNumViewController
+                self.navigationController?.show(detailVc, sender: self)
             
+            
+                let db = Firestore.firestore()
+            db.collection("users").addDocument(data : ["firstName " : userName1  ,  "lastName": userName2 ,"uid" : result?.user.uid]  ) {(error) in
+
+
+        }
+                
+                print(result?.user.email ?? "no email")
+            } else {
+                print(error?.localizedDescription ?? "")
+            }
         
+        
+    
+        
+   
+
  
                             
-                            let db = Firestore.firestore()
-                        db.collection("users").addDocument(data : ["firstName " : userName1  ,  "lastName": userName2 ,"uid" : result?.user.uid]  ) {(error) in
-
-
-                    }
+                  
                     
                     
                     

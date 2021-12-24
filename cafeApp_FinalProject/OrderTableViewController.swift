@@ -47,14 +47,33 @@ class OrderTableViewController: UITableViewController {
     }
 
    
+   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "orderID") as! OrderItemTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "orderID") as! OrderItemTableViewCell
 
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+//        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        
+        
         cell.textLabel?.text = orderArr[indexPath.row].title
+        
+//        for _ in [orderArr.count] {
+        
+        if indexPath.row ==  5{
+            cell.freeOrder.isHidden = false
+        }else {
+            cell.freeOrder.isHidden = true
+            
+        }
+            
+//       }
+        
         return cell
     }
     
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -89,4 +108,5 @@ class OrderTableViewController: UITableViewController {
     
 
 }
+
 }
