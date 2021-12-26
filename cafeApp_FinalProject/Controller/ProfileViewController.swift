@@ -14,13 +14,15 @@ import FirebaseStorage
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate , UICollectionViewDelegate, UICollectionViewDataSource  {
     
 
+    
+    // MARK: UICollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         imgArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCellID", for: indexPath) as! ImageCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCellID", for: indexPath) as! imageCellCollectionViewCell
         cell.cellImage.image = imgArray[indexPath.row]
         return cell
     }
@@ -29,10 +31,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     var imgArray = [UIImage]()
     
     @IBOutlet weak var imageCloud: UIImageView!
-//    @IBOutlet weak var kbStatus: UILabel!
+  
     @IBOutlet weak var imagesCollection: UICollectionView!
-//    @IBOutlet weak var uploadProgress: UIProgressView!
-//    @IBOutlet weak var downloadProgress: UIProgressView!
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +52,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         imagesCollection.delegate = self
         imagesCollection.dataSource = self
      
-        // ProgressViews
-//        downloadProgress.progress = 0
-//        uploadProgress.progress = 0
+ 
     }
     
     // MARK: IBActions
@@ -69,6 +68,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     
     // MARK: Download Multiple images from FB and populate in a Collection View
     func downloadImagesFromCloud() {
+        
         
         let storageRef = Storage.storage().reference()
         let folderRef = storageRef.child("Cloud")
@@ -115,8 +115,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
             
             // Its UI update, so we must run in main thread
             DispatchQueue.main.async {
-//                self.kbStatus.text = "\(snapshot.progress!.completedUnitCount / 1024) KB"
-//                self.uploadProgress.progress = Float(snapshot.progress?.fractionCompleted ?? 1.0)
+
             }
         }
         dismiss(animated: true, completion: nil)
@@ -124,10 +123,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
 }
 
 
-class ImageCell: UICollectionViewCell {
+class imageCellCollectionViewCell : UICollectionViewCell {
     
     @IBOutlet weak var cellImage: UIImageView!
-    
 }
 
    

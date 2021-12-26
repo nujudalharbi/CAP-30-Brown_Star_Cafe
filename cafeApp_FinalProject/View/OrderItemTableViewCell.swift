@@ -9,10 +9,18 @@ import UIKit
 import FirebaseFirestore
 import FirebaseDatabase
 
-class OrderItemTableViewCell: UITableViewCell {
 
+protocol CellOrder {
+    func delete(docID: String)
+}
+
+
+class OrderItemTableViewCell: UITableViewCell{
+    var indext: Int = 0
     let db = Database.database().reference()
     var titleStr = ""
+    var productObj: products!
+    var delegate: CellOrder!
     @IBOutlet weak var titleOrder: UILabel!
 
     
@@ -21,11 +29,18 @@ class OrderItemTableViewCell: UITableViewCell {
         super.awakeFromNib()
         titleOrder.text = titleStr
     }
+    
+    @IBAction func deletePrssed(_ sender: Any) {
+        guard let docID = productObj.id else { return }
+        delegate.delete(docID: docID)
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
-    
-}
+
+        
+    }
+

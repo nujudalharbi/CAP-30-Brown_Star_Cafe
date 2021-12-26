@@ -13,13 +13,13 @@ class MenuDetailViewController: UIViewController {
     var titleCoffee = ""
     var descriptionCoffee  = ""
     var priceCoffee = 0.0
-    var images = ""
-//    var orderArr = [products]()
+//    var images = ""
+    var orderArr = [products]()
     override func viewDidLoad() {
         super.viewDidLoad()
         titDetiels.text = titleCoffee
         DescDetiels.text = descriptionCoffee
-//       imgDetiels.image = UIImage(named: images)
+//       imgDetiels.image = UIImage(named: images)!
         priceDet.text = String(priceCoffee)
     }
     @IBOutlet weak var imgDetiels: UIImageView!
@@ -42,5 +42,15 @@ class MenuDetailViewController: UIViewController {
         
         print ("added to DB")
     }
+    
+    
+    @IBAction func currentBtn(_ sender: Any) {
+        
+       
+//        titDetiels.text! = currentLbl.text
+        
+    }
+    
+    
 
 }

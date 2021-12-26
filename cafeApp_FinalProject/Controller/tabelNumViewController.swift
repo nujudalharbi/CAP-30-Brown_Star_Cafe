@@ -14,10 +14,16 @@ class tabelNumViewController: UIViewController {
     
     
     @IBAction func ADD(_ sender: Any) {
-       
-        writeToFirestore()
         
-    }
+//        if tabelNum.text != nil{
+//            
+//        let detailVc = self.storyboard?.instantiateViewController(withIdentifier: "menuID") as! menuTableViewController
+//        self.navigationController?.show(detailVc, sender: self)
+//       
+//        }else {}
+        
+             writeToFirestore()
+  }
     
     
     func writeToFirestore() {

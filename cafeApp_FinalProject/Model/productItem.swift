@@ -13,12 +13,13 @@ class products{
     var descrabition : String?
     var image : String?
     var price : Double?
-    init(title : String? = "",  descrabition : String? = "" , image : String? = "", price : Double? = 0.0 ){
+    var id : String? = ""
+    init(title : String? = "",  descrabition : String? = "" , image : String? = "", price : Double? = 0.0, id: String = ""){
         self.title = title
         self.descrabition = descrabition
         self.image = image
         self.price = price
-      
+        self.id = id
     }
     
     

@@ -22,6 +22,10 @@ class menuTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register(UINib(nibName : "logoMenuTableViewCell", bundle : nil ) ,forCellReuseIdentifier: "logoID")
+        
+        
         tableView.register(UINib(nibName : "menuTableViewCell", bundle : nil ) ,forCellReuseIdentifier: "ProductID")
         tableView.rowHeight = 180
 
@@ -52,9 +56,16 @@ class menuTableViewController: UITableViewController {
     }
 
 
+
     
 //  -------------------------------
+//
     
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
+   
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         return productList.count
@@ -88,10 +99,11 @@ class menuTableViewController: UITableViewController {
         let VC = storyboard?.instantiateViewController(withIdentifier: "DetileID") as! MenuDetailViewController
 
       // performSegue(withIdentifier: "detailsID", sender: nil)
-        VC.titleCoffee = productList[indexPath.row].title!
-        VC.priceCoffee = productList[indexPath.row].price!
-//        VC.imgDetiels.image = UIImage(named : productList[indexPath.row].image!)!
-        VC.descriptionCoffee = productList[indexPath.row].descrabition!
+        VC.titleCoffee = productList[indexPath.row  ].title!
+        VC.priceCoffee = productList[indexPath.row ].price!
+//        VC.imgDetiels.image = UIImage(named : productList[indexPath.row].image!)
+        
+        VC.descriptionCoffee = productList[indexPath.row ].descrabition!
         self.navigationController?.show(VC, sender: true)
     }
     

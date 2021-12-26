@@ -10,32 +10,49 @@ import Firebase
 import FirebaseFirestore
 
 
-class OrderTableViewController: UITableViewController {
+class OrderTableViewController: UITableViewController, CellOrder {
     var item = 0
     var orderArr = [products]()
     
     let dbStore = Firestore.firestore()
+   
+    func delete(docID: String) {
+        dbStore.collection("Orders").document(docID).delete()
+        print ("Doc: \(docID) Deleted")
+        loadOrders()
+        
+//        Database.database().reference(withPath: "Orders").removeValue() {
+//            Error, ref in
+//            var alertVC = UIAlertController(title: "alert", message: "Delete Successfuly", preferredStyle: .alert)
+//            alertVC.addAction(UIAlertAction(title: "ok", style: .cancel, handler: nil))
+//            self.present(alertVC, animated: true, completion: nil)
+//        }
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        tableView.register(UINib(nibName: "OrderItemTableViewCell", bundle: .main), forCellReuseIdentifier: "orderID")
-        
+    fileprivate func loadOrders() {
         dbStore.collection("Orders").getDocuments { snapshot, error in
-        
             guard let snapshot = snapshot else { return }
-            
+            self.orderArr.removeAll()
             for doc in snapshot.documents {
-                
                 let dict = doc.data() as [String: Any]
                 let product = products(title: dict["title"] as? String ?? "",
                                        descrabition: dict["noteOrder"] as? String ?? "",
                                        image: dict["image"] as? String ?? "",
-                                       price: dict["price"] as? Double ?? 0.0)
+                                       price: dict["price"] as? Double ?? 0.0,
+                                       id: doc.documentID)
                 self.orderArr.append(product)
-                    self.tableView.reloadData()
+                self.tableView.reloadData()
             }
         }
+    }
+    
+    override func viewDidLoad() {
+
+        super.viewDidLoad()
+        
+        tableView.register(UINib(nibName: "OrderItemTableViewCell", bundle: .main), forCellReuseIdentifier: "orderID")
+        
+        loadOrders()
         
     }
 
@@ -52,12 +69,10 @@ class OrderTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "orderID") as! OrderItemTableViewCell
 
 //        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        
-        
+        cell.productObj = orderArr[indexPath.row]
+        cell.delegate = self
         cell.textLabel?.text = orderArr[indexPath.row].title
-        
-//        for _ in [orderArr.count] {
-        
+
         if indexPath.row ==  5{
             cell.freeOrder.isHidden = false
         }else {
@@ -90,23 +105,19 @@ class OrderTableViewController: UITableViewController {
     
     
     
-//    @IBAction func tapAction(_ sender: Any) {
-//        print (",,,,,,,")
-//        let alert = UIAlertController(title : "Are you sure to delete ?!" , message: nil , preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "yes", style: .default, handler: {
-//           action in
-//            self.orderArr.remove(at : self.item)
-//            self.tableView.reloadData()
-//        }))
-//        alert.addAction(UIAlertAction(title: "no", style: .default, handler:{action in
-//
-//        } ))
-//        present(alert , animated: true , completion: nil)
-//    }
+
     
 
     
 
 }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let VC = storyboard?.instantiateViewController(withIdentifier: "editID") as! EditOrderViewController
 
+ 
+        self.navigationController?.show(VC, sender: true)
+    }
+ 
 }

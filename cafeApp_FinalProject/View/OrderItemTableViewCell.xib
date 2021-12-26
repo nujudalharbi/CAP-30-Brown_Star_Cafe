@@ -26,19 +26,34 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fk2-KK-8kV">
-                        <rect key="frame" x="307" y="45" width="52" height="21"/>
+                        <rect key="frame" x="306" y="26" width="52" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.84322648190000005" green="0.19785410740000001" blue="0.06291410368" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofg-1m-jVD">
+                        <rect key="frame" x="285.5" y="55" width="70" height="31"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="mjB-zk-9Ay"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="delete"/>
+                        <connections>
+                            <action selector="deletePrssed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CqG-PO-GA6"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="kB3-Yv-l8f" secondAttribute="bottom" constant="41" id="5nC-J4-ZNC"/>
-                    <constraint firstItem="fk2-KK-8kV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="45" id="90Z-o0-GAj"/>
+                    <constraint firstItem="fk2-KK-8kV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26" id="90Z-o0-GAj"/>
                     <constraint firstItem="kB3-Yv-l8f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="41" id="WRt-5G-gcj"/>
-                    <constraint firstAttribute="trailing" secondItem="fk2-KK-8kV" secondAttribute="trailing" constant="32" id="kYi-yY-i68"/>
+                    <constraint firstAttribute="trailing" secondItem="fk2-KK-8kV" secondAttribute="trailing" constant="33" id="kYi-yY-i68"/>
                     <constraint firstItem="kB3-Yv-l8f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="u3C-Th-UGS"/>
-                    <constraint firstAttribute="bottom" secondItem="fk2-KK-8kV" secondAttribute="bottom" constant="44" id="uCA-TM-QrO"/>
+                    <constraint firstAttribute="bottom" secondItem="fk2-KK-8kV" secondAttribute="bottom" constant="63" id="uCA-TM-QrO"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Ofg-1m-jVD" secondAttribute="trailing" constant="15.75" id="uMv-kw-Cv0"/>
+                    <constraint firstItem="Ofg-1m-jVD" firstAttribute="firstBaseline" secondItem="fk2-KK-8kV" secondAttribute="baseline" constant="33" symbolType="layoutAnchor" id="zH2-bG-dve"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

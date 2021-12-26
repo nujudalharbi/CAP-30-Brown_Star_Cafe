@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		91513BB6276F830A004FA9D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91513BB5276F830A004FA9D6 /* AppDelegate.swift */; };
 		91513BB8276F830A004FA9D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91513BB7276F830A004FA9D6 /* SceneDelegate.swift */; };
-		91513BBA276F830A004FA9D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91513BB9276F830A004FA9D6 /* ViewController.swift */; };
 		91513BBD276F830A004FA9D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91513BBB276F830A004FA9D6 /* Main.storyboard */; };
 		91513BC0276F830A004FA9D6 /* cafeApp_FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91513BBE276F830A004FA9D6 /* cafeApp_FinalProject.xcdatamodeld */; };
 		91513BC2276F830B004FA9D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91513BC1276F830B004FA9D6 /* Assets.xcassets */; };
@@ -39,14 +38,19 @@
 		9178BEEB277095110043CCA0 /* OrderItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178BEE9277095110043CCA0 /* OrderItemTableViewCell.swift */; };
 		9178BEEC277095110043CCA0 /* OrderItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9178BEEA277095110043CCA0 /* OrderItemTableViewCell.xib */; };
 		917DE8622775F4CF00CB2A88 /* ScanCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917DE8612775F4CF00CB2A88 /* ScanCodeViewController.swift */; };
+		917DE86427767D5F00CB2A88 /* CurrentOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917DE86327767D5F00CB2A88 /* CurrentOrderViewController.swift */; };
 		918D5B662770A7F500AF69A6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918D5B652770A7F500AF69A6 /* ProfileViewController.swift */; };
+		91A15DE527773A8B00DFE1CE /* currentOrdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A15DE327773A8B00DFE1CE /* currentOrdTableViewCell.swift */; };
+		91A15DE627773A8B00DFE1CE /* currentOrdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A15DE427773A8B00DFE1CE /* currentOrdTableViewCell.xib */; };
+		91A15DEB2777410700DFE1CE /* EditOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A15DEA2777410700DFE1CE /* EditOrderViewController.swift */; };
+		91A15DF42777A87200DFE1CE /* logoMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A15DF22777A87200DFE1CE /* logoMenuTableViewCell.swift */; };
+		91A15DF52777A87200DFE1CE /* logoMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A15DF32777A87200DFE1CE /* logoMenuTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		91513BB2276F830A004FA9D6 /* cafeApp_FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cafeApp_FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91513BB5276F830A004FA9D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91513BB7276F830A004FA9D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91513BB9276F830A004FA9D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		91513BBC276F830A004FA9D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91513BBF276F830A004FA9D6 /* cafeApp_FinalProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = cafeApp_FinalProject.xcdatamodel; sourceTree = "<group>"; };
 		91513BC1276F830B004FA9D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,7 +70,13 @@
 		9178BEE9277095110043CCA0 /* OrderItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemTableViewCell.swift; sourceTree = "<group>"; };
 		9178BEEA277095110043CCA0 /* OrderItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderItemTableViewCell.xib; sourceTree = "<group>"; };
 		917DE8612775F4CF00CB2A88 /* ScanCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCodeViewController.swift; sourceTree = "<group>"; };
+		917DE86327767D5F00CB2A88 /* CurrentOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentOrderViewController.swift; sourceTree = "<group>"; };
 		918D5B652770A7F500AF69A6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		91A15DE327773A8B00DFE1CE /* currentOrdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = currentOrdTableViewCell.swift; sourceTree = "<group>"; };
+		91A15DE427773A8B00DFE1CE /* currentOrdTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = currentOrdTableViewCell.xib; sourceTree = "<group>"; };
+		91A15DEA2777410700DFE1CE /* EditOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOrderViewController.swift; sourceTree = "<group>"; };
+		91A15DF22777A87200DFE1CE /* logoMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logoMenuTableViewCell.swift; sourceTree = "<group>"; };
+		91A15DF32777A87200DFE1CE /* logoMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = logoMenuTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,31 +120,60 @@
 		91513BB4276F830A004FA9D6 /* cafeApp_FinalProject */ = {
 			isa = PBXGroup;
 			children = (
-				91513BB5276F830A004FA9D6 /* AppDelegate.swift */,
-				91513BB7276F830A004FA9D6 /* SceneDelegate.swift */,
-				91513BB9276F830A004FA9D6 /* ViewController.swift */,
-				917DE8612775F4CF00CB2A88 /* ScanCodeViewController.swift */,
-				91513BE5276F8CF2004FA9D6 /* SignUpViewController.swift */,
-				916CEEC92773AD1D00F12D7E /* LoginViewController.swift */,
-				916DC53A27746BDA008D5609 /* ImageCellCollectionViewCell.swift */,
-				918D5B652770A7F500AF69A6 /* ProfileViewController.swift */,
-				91513BFE276F9C63004FA9D6 /* tabelNumViewController.swift */,
-				9178BEE7277094D90043CCA0 /* OrderTableViewController.swift */,
-				91513C17276FA67E004FA9D6 /* menuTableViewController.swift */,
-				9178BEE3277047AF0043CCA0 /* MenuDetailViewController.swift */,
-				91513C11276FA3D3004FA9D6 /* productItem.swift */,
-				9178BEE9277095110043CCA0 /* OrderItemTableViewCell.swift */,
-				9178BEEA277095110043CCA0 /* OrderItemTableViewCell.xib */,
-				91513C13276FA45C004FA9D6 /* menuTableViewCell.swift */,
-				91513C14276FA45C004FA9D6 /* menuTableViewCell.xib */,
-				91513BBB276F830A004FA9D6 /* Main.storyboard */,
+				91A15DE927773E4B00DFE1CE /* Model */,
+				91A15DE827773DF100DFE1CE /* View */,
+				91A15DE727773C6500DFE1CE /* Controller */,
 				91513BC1276F830B004FA9D6 /* Assets.xcassets */,
-				91513BC3276F830B004FA9D6 /* LaunchScreen.storyboard */,
 				91513BC6276F830B004FA9D6 /* Info.plist */,
 				91513BBE276F830A004FA9D6 /* cafeApp_FinalProject.xcdatamodeld */,
 				91513BCC276F8359004FA9D6 /* GoogleService-Info.plist */,
 			);
 			path = cafeApp_FinalProject;
+			sourceTree = "<group>";
+		};
+		91A15DE727773C6500DFE1CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				91513BB5276F830A004FA9D6 /* AppDelegate.swift */,
+				91513BB7276F830A004FA9D6 /* SceneDelegate.swift */,
+				916CEEC92773AD1D00F12D7E /* LoginViewController.swift */,
+				91513BE5276F8CF2004FA9D6 /* SignUpViewController.swift */,
+				91513BFE276F9C63004FA9D6 /* tabelNumViewController.swift */,
+				91513C17276FA67E004FA9D6 /* menuTableViewController.swift */,
+				9178BEE3277047AF0043CCA0 /* MenuDetailViewController.swift */,
+				9178BEE7277094D90043CCA0 /* OrderTableViewController.swift */,
+				91A15DEA2777410700DFE1CE /* EditOrderViewController.swift */,
+				917DE86327767D5F00CB2A88 /* CurrentOrderViewController.swift */,
+				918D5B652770A7F500AF69A6 /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		91A15DE827773DF100DFE1CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91A15DE327773A8B00DFE1CE /* currentOrdTableViewCell.swift */,
+				91A15DE427773A8B00DFE1CE /* currentOrdTableViewCell.xib */,
+				91513C13276FA45C004FA9D6 /* menuTableViewCell.swift */,
+				91513C14276FA45C004FA9D6 /* menuTableViewCell.xib */,
+				9178BEE9277095110043CCA0 /* OrderItemTableViewCell.swift */,
+				9178BEEA277095110043CCA0 /* OrderItemTableViewCell.xib */,
+				91513BBB276F830A004FA9D6 /* Main.storyboard */,
+				917DE8612775F4CF00CB2A88 /* ScanCodeViewController.swift */,
+				91513BC3276F830B004FA9D6 /* LaunchScreen.storyboard */,
+				916DC53A27746BDA008D5609 /* ImageCellCollectionViewCell.swift */,
+				91A15DF22777A87200DFE1CE /* logoMenuTableViewCell.swift */,
+				91A15DF32777A87200DFE1CE /* logoMenuTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		91A15DE927773E4B00DFE1CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				91513C11276FA3D3004FA9D6 /* productItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				91513C16276FA45C004FA9D6 /* menuTableViewCell.xib in Resources */,
+				91A15DE627773A8B00DFE1CE /* currentOrdTableViewCell.xib in Resources */,
 				91513BC5276F830B004FA9D6 /* LaunchScreen.storyboard in Resources */,
+				91A15DF52777A87200DFE1CE /* logoMenuTableViewCell.xib in Resources */,
 				91513BC2276F830B004FA9D6 /* Assets.xcassets in Resources */,
 				91513BCD276F8359004FA9D6 /* GoogleService-Info.plist in Resources */,
 				91513BBD276F830A004FA9D6 /* Main.storyboard in Resources */,
@@ -228,19 +269,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				916CEECA2773AD1D00F12D7E /* LoginViewController.swift in Sources */,
-				91513BBA276F830A004FA9D6 /* ViewController.swift in Sources */,
 				91513BB6276F830A004FA9D6 /* AppDelegate.swift in Sources */,
 				916DC53B27746BDA008D5609 /* ImageCellCollectionViewCell.swift in Sources */,
 				91513C15276FA45C004FA9D6 /* menuTableViewCell.swift in Sources */,
 				91513BFF276F9C63004FA9D6 /* tabelNumViewController.swift in Sources */,
+				91A15DEB2777410700DFE1CE /* EditOrderViewController.swift in Sources */,
 				917DE8622775F4CF00CB2A88 /* ScanCodeViewController.swift in Sources */,
 				91513C12276FA3D3004FA9D6 /* productItem.swift in Sources */,
+				91A15DF42777A87200DFE1CE /* logoMenuTableViewCell.swift in Sources */,
+				917DE86427767D5F00CB2A88 /* CurrentOrderViewController.swift in Sources */,
 				9178BEEB277095110043CCA0 /* OrderItemTableViewCell.swift in Sources */,
 				91513BB8276F830A004FA9D6 /* SceneDelegate.swift in Sources */,
 				9178BEE4277047AF0043CCA0 /* MenuDetailViewController.swift in Sources */,
 				91513BC0276F830A004FA9D6 /* cafeApp_FinalProject.xcdatamodeld in Sources */,
 				91513BE6276F8CF2004FA9D6 /* SignUpViewController.swift in Sources */,
 				918D5B662770A7F500AF69A6 /* ProfileViewController.swift in Sources */,
+				91A15DE527773A8B00DFE1CE /* currentOrdTableViewCell.swift in Sources */,
 				9178BEE8277094D90043CCA0 /* OrderTableViewController.swift in Sources */,
 				91513C18276FA67F004FA9D6 /* menuTableViewController.swift in Sources */,
 			);
