@@ -22,5 +22,8 @@ class products{
         self.id = id
     }
     
-    
+//    func getTitle ()-> String{
+//        return
+//
+//    }
 }

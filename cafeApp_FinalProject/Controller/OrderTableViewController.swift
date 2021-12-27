@@ -15,19 +15,18 @@ class OrderTableViewController: UITableViewController, CellOrder {
     var orderArr = [products]()
     
     let dbStore = Firestore.firestore()
+    
+    
+//    func delete ---------------------------
    
     func delete(docID: String) {
         dbStore.collection("Orders").document(docID).delete()
         print ("Doc: \(docID) Deleted")
         loadOrders()
-        
-//        Database.database().reference(withPath: "Orders").removeValue() {
-//            Error, ref in
-//            var alertVC = UIAlertController(title: "alert", message: "Delete Successfuly", preferredStyle: .alert)
-//            alertVC.addAction(UIAlertAction(title: "ok", style: .cancel, handler: nil))
-//            self.present(alertVC, animated: true, completion: nil)
-//        }
+
     }
+    
+
     
     fileprivate func loadOrders() {
         dbStore.collection("Orders").getDocuments { snapshot, error in
@@ -45,6 +44,8 @@ class OrderTableViewController: UITableViewController, CellOrder {
             }
         }
     }
+    
+//    --------------------------------------------
     
     override func viewDidLoad() {
 
@@ -90,27 +91,27 @@ class OrderTableViewController: UITableViewController, CellOrder {
         return true
     }
     
-    
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            
-            orderArr.remove(at: indexPath.row)
-            Database.database().reference(withPath: "Orders").child("title").removeValue(){ Error , ref in
-                
-            }
-            tableView.reloadData()
-           
-    }
-    
-    
-    
-    
-
-    
-
-    
-
-}
+//    
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            
+//            orderArr.remove(at: indexPath.row)
+//            Database.database().reference(withPath: "Orders").child("title").removeValue(){ Error , ref in
+//                
+//            }
+//            tableView.reloadData()
+//           
+//    }
+//    
+//    
+//    
+//    
+//
+//    
+//
+//    
+//
+//}
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

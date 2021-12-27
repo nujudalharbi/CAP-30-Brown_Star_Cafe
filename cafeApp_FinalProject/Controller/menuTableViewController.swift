@@ -98,10 +98,12 @@ class menuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let VC = storyboard?.instantiateViewController(withIdentifier: "DetileID") as! MenuDetailViewController
 
+        let selectedCell = tableView.cellForRow(at: indexPath) as! menuTableViewCell
+        
       // performSegue(withIdentifier: "detailsID", sender: nil)
-        VC.titleCoffee = productList[indexPath.row  ].title!
-        VC.priceCoffee = productList[indexPath.row ].price!
-//        VC.imgDetiels.image = UIImage(named : productList[indexPath.row].image!)
+        VC.titleCoffee = productList[indexPath.row].title!
+        VC.priceCoffee = productList[indexPath.row].price!
+        VC.imageDetails = selectedCell.imagesProduct.image
         
         VC.descriptionCoffee = productList[indexPath.row ].descrabition!
         self.navigationController?.show(VC, sender: true)
