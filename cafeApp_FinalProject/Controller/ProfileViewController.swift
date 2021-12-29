@@ -13,7 +13,44 @@ import FirebaseStorage
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate , UICollectionViewDelegate, UICollectionViewDataSource  {
     
-
+    @IBOutlet weak var nameUserLbl: UILabel!
+    
+    @IBOutlet weak var emailUser: UILabel!
+    
+    let dbStore = Firestore.firestore()
+     
+    
+    func infoUser(){
+        if let name = Auth.auth().currentUser?.uid{
+            let ref = dbStore.collection("users").document(name)
+            ref.getDocument{
+                (doc , error ) in
+                if let doc = doc , doc.exists{
+                    
+                    _ = doc.data().map(String.init(describing: )) ?? "nil"
+                    
+                    self.nameUserLbl.text = doc.data()? ["firstName"] as? String
+                    self.emailUser.text = doc.data()? ["email"] as? String
+                    
+                    _ = User.self
+                    
+                }
+            }
+        }
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     // MARK: UICollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -69,27 +106,48 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     // MARK: Download Multiple images from FB and populate in a Collection View
     func downloadImagesFromCloud() {
         
-        
-        let storageRef = Storage.storage().reference()
-        let folderRef = storageRef.child("Cloud")
-
-        folderRef.listAll { snapshot, error in
-            print (snapshot.items.count)
-            
-            for (index, item) in snapshot.items.enumerated() {
-                // MARK: Download the image and save it to an array
-                item.getData(maxSize: Int64.max) { data, error in
-                    guard let data = data else { return }
-                    self.imgArray.append(UIImage(data: data)!)
-                    DispatchQueue.main.async {
-                        self.imagesCollection.reloadData()
+//        
+//        let storageRef = Storage.storage().reference()
+//        let folderRef = storageRef.child("Cloud")
+//
+//        folderRef.listAll { snapshot, error in
+//            print (snapshot.items.count)
+//            
+//            for (index, item) in snapshot.items.enumerated() {
+               // MARK: Download the image and save it to an array
+//                item.getData(maxSize: Int64.max) { data, error in
+//                    guard let data = data else { return }
+//                    self.imgArray.append(UIImage(data: data)!)
+//                    DispatchQueue.main.async {
+//                        self.imagesCollection.reloadData()
 //                        self.downloadProgress.progress =  Float(index + 1 / snapshot.items.count)
-                    }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//
+    
+    
+    let storageRef = Storage.storage().reference()
+    let folderRef = storageRef.child("Cloud")
+
+    folderRef.listAll { snapshot, error in
+        print (snapshot.items.count)
+        
+        for (_, item) in snapshot.items.enumerated() {
+            // MARK: Download the image and save it to an array
+            item.getData(maxSize: Int64.max) { data, error in
+                guard let data = data else { return }
+                self.imgArray.append(UIImage(data: data)!)
+                DispatchQueue.main.async {
+                    self.imagesCollection.reloadData()
+                  
                 }
             }
         }
     }
-    
+}
     // MARK: Handle ImagePicker Delegate and Upload the captured image to FB Storage
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
@@ -114,13 +172,11 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         task.observe(.progress) { snapshot in
             
             // Its UI update, so we must run in main thread
-            DispatchQueue.main.async {
-
-            }
-        }
+                    }
         dismiss(animated: true, completion: nil)
     }
 }
+
 
 
 class imageCellCollectionViewCell : UICollectionViewCell {
@@ -133,30 +189,4 @@ class imageCellCollectionViewCell : UICollectionViewCell {
  
  
     
-//    --------------------------------------------------
-    
-    //    func observeFirestore(){
-//        dbStore1.collection(" users").addSnapshotListener{
-//            snapshot , error in
-//             guard let docs  = snapshot?.documents else {return}
-//                for doc in docs{
-//                    if let object = doc.data() as? [String : String]
-//                    {
-//
-//                        if (object.count > 0){
-//                            let firstNam = object["firstName "]
-//                            let lastNam = object["lastName"]
-//                            self.nameUser.text  = firstNam
-//
-//                        }
-//                    }
-//
-//                    print (doc.data())
-//                }
-//
-//            }
-//
-//        }
-        
-//-----------------------------------------
 

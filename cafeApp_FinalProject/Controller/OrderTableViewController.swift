@@ -26,7 +26,32 @@ class OrderTableViewController: UITableViewController, CellOrder {
 
     }
     
+    
+    
+    
+    func edit(docID: String) {
+        let ordercell = dbStore.collection("Orders").document("docID")
 
+        // Set the "capital" field of the city 'DC'
+        ordercell.updateData([
+            "capital": true
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+            }
+        }
+        
+        
+
+    }
+//    total
+
+   
+    
+    
+ 
     
     fileprivate func loadOrders() {
         dbStore.collection("Orders").getDocuments { snapshot, error in
@@ -73,7 +98,10 @@ class OrderTableViewController: UITableViewController, CellOrder {
         cell.productObj = orderArr[indexPath.row]
         cell.delegate = self
         cell.textLabel?.text = orderArr[indexPath.row].title
-
+//        totel.text = price * title
+        
+        
+        
         if indexPath.row ==  5{
             cell.freeOrder.isHidden = false
         }else {

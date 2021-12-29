@@ -30,7 +30,7 @@ class SignUpViewController: UIViewController {
             
             
             if (error == nil){
-                let detailVc = self.storyboard?.instantiateViewController(withIdentifier: "tabelID") as! tabelNumViewController
+                let detailVc = self.storyboard?.instantiateViewController(withIdentifier: "scanID") as! ScanCodeViewController
                 self.navigationController?.show(detailVc, sender: self)
             
             

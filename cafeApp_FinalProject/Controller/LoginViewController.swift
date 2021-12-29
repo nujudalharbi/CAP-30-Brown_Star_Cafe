@@ -18,7 +18,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordLogin: UITextField!
     @IBOutlet weak var lbStatus: UILabel!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+//        lbStatus.text = i
 
         // Do any additional setup after loading the view.
     }
@@ -27,7 +29,7 @@ class LoginViewController: UIViewController {
         
         Auth.auth().signIn(withEmail: emailLogin.text!, password: passwordLogin.text!) { result , error  in
                    if (error == nil){
-                       let detailVc = self.storyboard?.instantiateViewController(withIdentifier: "tabelID") as! tabelNumViewController
+                       let detailVc = self.storyboard?.instantiateViewController(withIdentifier: "scanID") as! ScanCodeViewController
                        self.navigationController?.show(detailVc, sender: self)
                        print(result?.user.email ?? "")
                        self.lbStatus.text = "successfully login"

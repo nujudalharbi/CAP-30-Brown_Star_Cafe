@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 protocol CellOrder {
     func delete(docID: String)
+    func edit(docID: String)
 }
 
 
@@ -35,6 +36,16 @@ class OrderItemTableViewCell: UITableViewCell{
         delegate.delete(docID: docID)
     }
 
+    
+    
+    @IBAction func editPressed(_ sender: Any) {
+        
+        guard let docID = productObj.id else { return }
+        delegate.edit(docID: docID)
+        
+    }
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

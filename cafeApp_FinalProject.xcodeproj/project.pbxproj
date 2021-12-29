@@ -45,6 +45,8 @@
 		91A15DEB2777410700DFE1CE /* EditOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A15DEA2777410700DFE1CE /* EditOrderViewController.swift */; };
 		91A15DF42777A87200DFE1CE /* logoMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A15DF22777A87200DFE1CE /* logoMenuTableViewCell.swift */; };
 		91A15DF52777A87200DFE1CE /* logoMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A15DF32777A87200DFE1CE /* logoMenuTableViewCell.xib */; };
+		91D38C34277A0FEF0018493A /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D38C32277A0FEF0018493A /* CategoriesTableViewCell.swift */; };
+		91D38C35277A0FEF0018493A /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91D38C33277A0FEF0018493A /* CategoriesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,8 @@
 		91A15DEA2777410700DFE1CE /* EditOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOrderViewController.swift; sourceTree = "<group>"; };
 		91A15DF22777A87200DFE1CE /* logoMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logoMenuTableViewCell.swift; sourceTree = "<group>"; };
 		91A15DF32777A87200DFE1CE /* logoMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = logoMenuTableViewCell.xib; sourceTree = "<group>"; };
+		91D38C32277A0FEF0018493A /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
+		91D38C33277A0FEF0018493A /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 				91513BB7276F830A004FA9D6 /* SceneDelegate.swift */,
 				916CEEC92773AD1D00F12D7E /* LoginViewController.swift */,
 				91513BE5276F8CF2004FA9D6 /* SignUpViewController.swift */,
+				917DE8612775F4CF00CB2A88 /* ScanCodeViewController.swift */,
 				91513BFE276F9C63004FA9D6 /* tabelNumViewController.swift */,
 				91513C17276FA67E004FA9D6 /* menuTableViewController.swift */,
 				9178BEE3277047AF0043CCA0 /* MenuDetailViewController.swift */,
@@ -153,13 +158,14 @@
 			isa = PBXGroup;
 			children = (
 				91A15DE327773A8B00DFE1CE /* currentOrdTableViewCell.swift */,
+				91D38C32277A0FEF0018493A /* CategoriesTableViewCell.swift */,
+				91D38C33277A0FEF0018493A /* CategoriesTableViewCell.xib */,
 				91A15DE427773A8B00DFE1CE /* currentOrdTableViewCell.xib */,
 				91513C13276FA45C004FA9D6 /* menuTableViewCell.swift */,
 				91513C14276FA45C004FA9D6 /* menuTableViewCell.xib */,
 				9178BEE9277095110043CCA0 /* OrderItemTableViewCell.swift */,
 				9178BEEA277095110043CCA0 /* OrderItemTableViewCell.xib */,
 				91513BBB276F830A004FA9D6 /* Main.storyboard */,
-				917DE8612775F4CF00CB2A88 /* ScanCodeViewController.swift */,
 				91513BC3276F830B004FA9D6 /* LaunchScreen.storyboard */,
 				916DC53A27746BDA008D5609 /* ImageCellCollectionViewCell.swift */,
 				91A15DF22777A87200DFE1CE /* logoMenuTableViewCell.swift */,
@@ -253,6 +259,7 @@
 				91513C16276FA45C004FA9D6 /* menuTableViewCell.xib in Resources */,
 				91A15DE627773A8B00DFE1CE /* currentOrdTableViewCell.xib in Resources */,
 				91513BC5276F830B004FA9D6 /* LaunchScreen.storyboard in Resources */,
+				91D38C35277A0FEF0018493A /* CategoriesTableViewCell.xib in Resources */,
 				91A15DF52777A87200DFE1CE /* logoMenuTableViewCell.xib in Resources */,
 				91513BC2276F830B004FA9D6 /* Assets.xcassets in Resources */,
 				91513BCD276F8359004FA9D6 /* GoogleService-Info.plist in Resources */,
@@ -273,6 +280,7 @@
 				916DC53B27746BDA008D5609 /* ImageCellCollectionViewCell.swift in Sources */,
 				91513C15276FA45C004FA9D6 /* menuTableViewCell.swift in Sources */,
 				91513BFF276F9C63004FA9D6 /* tabelNumViewController.swift in Sources */,
+				91D38C34277A0FEF0018493A /* CategoriesTableViewCell.swift in Sources */,
 				91A15DEB2777410700DFE1CE /* EditOrderViewController.swift in Sources */,
 				917DE8622775F4CF00CB2A88 /* ScanCodeViewController.swift in Sources */,
 				91513C12276FA3D3004FA9D6 /* productItem.swift in Sources */,
@@ -449,7 +457,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.google.cafeApp-FinalProject890";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.cafeApp-FinalProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -478,7 +486,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.google.cafeApp-FinalProject890";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.cafeApp-FinalProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

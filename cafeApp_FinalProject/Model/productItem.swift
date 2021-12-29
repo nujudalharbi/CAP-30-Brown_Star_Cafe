@@ -22,8 +22,26 @@ class products{
         self.id = id
     }
     
-//    func getTitle ()-> String{
-//        return
-//
-//    }
+    func getTitle ()-> String{
+        return title!
+
+    }
+    
+    func getDescrabtion() -> String {
+        return descrabition!
+        
+    }
+    func getImage () -> String {
+        return image!
+        
+    }
+    func getPrice () -> Double {
+        return price!
+        
+    }
+    func getID() -> String{
+        return id!
+        
+    }
+
 }
