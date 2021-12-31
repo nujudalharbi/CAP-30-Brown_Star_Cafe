@@ -6,42 +6,42 @@
 //
 
 import UIKit
-import FirebaseFirestore
-import FirebaseDatabase
-
-
-protocol CellOrder {
-    func delete(docID: String)
-    func edit(docID: String)
-}
+//import FirebaseFirestore
+//import FirebaseDatabase
+//
+//
+//protocol CellOrder {
+//    func delete(docID: String)
+//    func edit(docID: String)
+//}
 
 
 class OrderItemTableViewCell: UITableViewCell{
-    var indext: Int = 0
-    let db = Database.database().reference()
-    var titleStr = ""
-    var productObj: products!
-    var delegate: CellOrder!
+//    var indext: Int = 0
+//    let db = Database.database().reference()
+//    var titleStr = ""
+//    var productObj: products!
+//    var delegate: CellOrder!
     @IBOutlet weak var titleOrder: UILabel!
 
     
     @IBOutlet weak var freeOrder: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        titleOrder.text = titleStr
+//        titleOrder.text = titleStr
     }
     
     @IBAction func deletePrssed(_ sender: Any) {
-        guard let docID = productObj.id else { return }
-        delegate.delete(docID: docID)
+//        guard let docID = productObj.id else { return }
+//        delegate.delete(docID: docID)
     }
 
     
     
     @IBAction func editPressed(_ sender: Any) {
-        
-        guard let docID = productObj.id else { return }
-        delegate.edit(docID: docID)
+//        
+//        guard let docID = productObj.id else { return }
+//        delegate.edit(docID: docID)
         
     }
     

@@ -14,12 +14,16 @@ class products{
     var image : String?
     var price : Double?
     var id : String? = ""
-    init(title : String? = "",  descrabition : String? = "" , image : String? = "", price : Double? = 0.0, id: String = ""){
+    var canEdit: Bool = true
+    var status : String? = ""
+    
+    init(title : String? = "",  descrabition : String? = "" , image : String? = "", price : Double? = 0.0, id: String = "", status: String?){
         self.title = title
         self.descrabition = descrabition
         self.image = image
         self.price = price
         self.id = id
+        self.status = status
     }
     
     func getTitle ()-> String{

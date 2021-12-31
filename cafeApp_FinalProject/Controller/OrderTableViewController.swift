@@ -10,7 +10,7 @@ import Firebase
 import FirebaseFirestore
 
 
-class OrderTableViewController: UITableViewController, CellOrder {
+class OrderTableViewController: UITableViewController {
     var item = 0
     var orderArr = [products]()
     
@@ -95,8 +95,8 @@ class OrderTableViewController: UITableViewController, CellOrder {
         let cell = tableView.dequeueReusableCell(withIdentifier: "orderID") as! OrderItemTableViewCell
 
 //        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        cell.productObj = orderArr[indexPath.row]
-        cell.delegate = self
+//        cell.productObj = orderArr[indexPath.row]
+//        cell.delegate = self
         cell.textLabel?.text = orderArr[indexPath.row].title
 //        totel.text = price * title
         
@@ -119,27 +119,7 @@ class OrderTableViewController: UITableViewController, CellOrder {
         return true
     }
     
-//    
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            
-//            orderArr.remove(at: indexPath.row)
-//            Database.database().reference(withPath: "Orders").child("title").removeValue(){ Error , ref in
-//                
-//            }
-//            tableView.reloadData()
-//           
-//    }
-//    
-//    
-//    
-//    
-//
-//    
-//
-//    
-//
-//}
+
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

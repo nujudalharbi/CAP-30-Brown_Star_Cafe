@@ -6,15 +6,51 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseDatabase
+
+
+
+protocol CellOrder {
+    func delete(docID: String)
+ 
+}
+
 
 class currentOrdTableViewCell: UITableViewCell {
-
+      
+        var indext: Int = 0
+        let db = Database.database().reference()
+        var titleStr = ""
+        var productObj: products!
+        var delegate: CellOrder!
+    
+    
+    
+    
+    
+    @IBOutlet weak var viewOrder: UIView!
+    
     override func awakeFromNib() {
+    
         super.awakeFromNib()
         // Initialization code
+        titleOrder.text = titleStr
     }
+    @IBOutlet weak var titleOrder: UILabel!
+    
+    @IBOutlet weak var FreeOrderLbl: UILabel!
+    
+    
+    
+    @IBAction func deleteBtn(_ sender: Any) {
+        guard let docID = productObj.id else { return }
+        delegate.delete(docID: docID)
+    }
+    
 
-    @IBOutlet weak var currentLbl: UILabel!
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

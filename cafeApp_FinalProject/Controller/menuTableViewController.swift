@@ -39,8 +39,10 @@ class menuTableViewController: UITableViewController {
                         let img = object["image"] as? String
                         let price = object["price"] as? Double
                         let desc = object["descrabition"] as? String
+                        let status = object["status"] as? String
                         
-                        let pro = products(title: tit, descrabition: desc, image: img, price: price)
+                        let pro = products(title: tit, descrabition: desc, image: img, price: price,
+                                           status: status)
                         self.productList.append(pro)
                         
                         self.tableView.reloadData()

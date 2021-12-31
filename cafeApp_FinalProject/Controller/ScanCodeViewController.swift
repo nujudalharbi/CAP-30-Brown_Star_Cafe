@@ -7,6 +7,8 @@
 
 import UIKit
 import AVFoundation
+import FirebaseDatabase
+import FirebaseFirestore
 
 class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsDelegate {
     var video = AVCaptureVideoPreviewLayer()
@@ -49,9 +51,16 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
                    
                    
                    let alert = UIAlertController(title: "qr code", message: object.stringValue , preferredStyle: .alert)
+                   
                    alert.addAction(UIAlertAction(title: "no ", style: .default, handler: nil))
-                   alert.addAction(UIAlertAction(title: "copy ", style: .default, handler: {(nil) in
+                   alert.addAction(UIAlertAction(title: "ok ", style: .default, handler: {(nil) in
                        UIPasteboard.general.string = object.stringValue
+                       
+                       //
+                       self.writeToFirestore(str: object.stringValue!)
+                       let tabvc = self.storyboard?.instantiateViewController(withIdentifier: "tabid") as! UITabBarController
+                       self.navigationController?.show(tabvc, sender: nil)
+                       
                    }))
                    present(alert, animated: true , completion: nil)
                }
@@ -62,4 +71,13 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
         }
     }
     
+    
+    
+    let dbStore = Firestore.firestore()
+
+
+    func writeToFirestore(str : String) {
+        dbStore.collection("Place").addDocument(
+            data: ["url" : str])
+    }
 }

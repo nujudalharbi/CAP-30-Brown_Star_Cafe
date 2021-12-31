@@ -13,26 +13,37 @@ import FirebaseStorage
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate , UICollectionViewDelegate, UICollectionViewDataSource  {
     
+    
+    
     @IBOutlet weak var nameUserLbl: UILabel!
     
     @IBOutlet weak var emailUser: UILabel!
     
+    
+    
+    
+    var customer = [Customer]()
     let dbStore = Firestore.firestore()
      
     
     func infoUser(){
-        if let name = Auth.auth().currentUser?.uid{
-            let ref = dbStore.collection("users").document(name)
-            ref.getDocument{
-                (doc , error ) in
-                if let doc = doc , doc.exists{
+        if let user = Auth.auth().currentUser?.uid{
+            let ref = dbStore.collection("users").document(user)
+            ref.getDocument{ [self]
+                (document , error ) in
+                if let document = document , document.exists{
                     
-                    _ = doc.data().map(String.init(describing: )) ?? "nil"
+                    let dataDescripation = document.data().map(String.init(describing: )) ?? "nil"
                     
-                    self.nameUserLbl.text = doc.data()? ["firstName"] as? String
-                    self.emailUser.text = doc.data()? ["email"] as? String
+                    self.nameUserLbl.text = document.data()? ["firstName "] as? String
+//                    self.emailUser.text = document.data()? ["email"] as? String
                     
-                    _ = User.self
+                    _ = Customer(firstName: nameUserLbl.text!, lastName: emailUser.text!)
+                    print ("......")
+                }
+                else {
+                    
+                    print (error?.localizedDescription as Any)
                     
                 }
             }
@@ -75,6 +86,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     override func viewDidLoad() {
         super.viewDidLoad()
         configureControls()
+        infoUser()
     }
 
     // MARK: Configuration for UIImagePickerView and UICollectionView

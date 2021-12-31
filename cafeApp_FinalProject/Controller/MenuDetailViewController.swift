@@ -96,19 +96,7 @@ class MenuDetailViewController: UIViewController {
     }
     
     
-    @IBAction func currentBtn(_ sender: Any) {
-        
-        let dbRef = Firestore.firestore()
-        
-        let order = ["title" : titDetiels.text! ,
-                     "noteOrder" : NoteTxt.text! , "qunatity" : quantityLbl.text!]
-        dbRef.collection("Orders").addDocument(data: order)
-        
-        print ("added to DB")
-       
-      
-        
-    }
+    
     
     
 
