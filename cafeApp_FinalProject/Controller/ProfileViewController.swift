@@ -33,12 +33,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
                 (document , error ) in
                 if let document = document , document.exists{
                     
-                    let dataDescripation = document.data().map(String.init(describing: )) ?? "nil"
+                    _ = document.data().map(String.init(describing: )) ?? "nil"
                     
                     self.nameUserLbl.text = document.data()? ["firstName "] as? String
-//                    self.emailUser.text = document.data()? ["email"] as? String
+                    self.emailUser.text = document.data()? ["email"] as? String
                     
-                    _ = Customer(firstName: nameUserLbl.text!, lastName: emailUser.text!)
+                    _ = Customer(firstName: nameUserLbl.text!, email:  emailUser.text!)
                     print ("......")
                 }
                 else {

@@ -89,8 +89,11 @@ class menuTableViewController: UITableViewController {
             }.resume()
         }
         cell.titleProduct.text = pro.title
-       
-  
+//        layout cell and image
+        
+        cell.viewCell.layer.cornerRadius = cell.viewCell.frame.height / 2
+        cell.imagesProduct.layer.cornerRadius = cell.imagesProduct.frame.height / 2
+        cell.backgroundCellImg.layer.cornerRadius = cell.backgroundCellImg.frame.height / 2
         return cell
        
     }

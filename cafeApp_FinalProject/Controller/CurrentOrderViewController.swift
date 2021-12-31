@@ -86,7 +86,7 @@ class CurrentOrderViewController: UIViewController  , UITableViewDelegate , UITa
         tabelView.dataSource = self
         loadOrders()
         
-        
+            
          
 
       
@@ -122,8 +122,8 @@ class CurrentOrderViewController: UIViewController  , UITableViewDelegate , UITa
 
         }
             
-       
-        
+         cell.viewCellOrder.layer.cornerRadius = cell.viewCellOrder.frame.height / 2
+         cell.backgroundCellOrd.layer.cornerRadius = cell.backgroundCellOrd.frame.height / 2
         return cell
     }
     
@@ -163,15 +163,15 @@ class CurrentOrderViewController: UIViewController  , UITableViewDelegate , UITa
  
     @IBAction func closeOrderBtn(_ sender: Any) {
         
-        dbStore.collection("Orders").addDocument(
-            data: ["status" : "close"])
+//        dbStore.collection("Orders").addDocument(
+//            data: ["status" : "close"])
         
 //        let dbRef = Firestore.firestore()
-//        
-//        let order = ["title" : titDetiels.text! ,
-//                     "noteOrder" : NoteTxt.text! , "qunatity" : quantityLbl.text! , "" : ]
+//
+//        let order = ["title" : nil ,
+//                     "noteOrder" : nil , "qunatity" : nil ,"status":  "close" ]
 //        dbRef.collection("Orders").addDocument(data: order)
-//        
+//
 //        print ("added to DB")
     }
         

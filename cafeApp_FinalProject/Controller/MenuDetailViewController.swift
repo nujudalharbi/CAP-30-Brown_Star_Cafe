@@ -89,7 +89,7 @@ class MenuDetailViewController: UIViewController {
         let dbRef = Firestore.firestore()
         
         let order = ["title" : titDetiels.text! ,
-                     "noteOrder" : NoteTxt.text! , "qunatity" : quantityLbl.text!]
+                     "noteOrder" : NoteTxt.text! , "qunatity" : quantityLbl.text! , "status" : "open"]
         dbRef.collection("Orders").addDocument(data: order)
         
         print ("added to DB")

@@ -9,11 +9,13 @@ import UIKit
 
 class cratTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var backgroundCell: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    @IBOutlet weak var viewCellCloseOrd: UILabel!
+    
     @IBOutlet weak var orderLbl: UILabel!
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

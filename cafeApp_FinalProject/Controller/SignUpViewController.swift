@@ -25,7 +25,7 @@ class SignUpViewController: UIViewController {
         
         let userName1 = firstName.text!
         let userName2 = lastName.text!
-        Auth.auth().createUser(withEmail: emailLabel.text!, password: passWord.text!) { result , error  in
+        Auth.auth().createUser(withEmail: emailLabel.text!, password: passWord.text!) { [self] result , error  in
 //            Check the result and let them in
             
             
@@ -35,14 +35,15 @@ class SignUpViewController: UIViewController {
             
             
                 let db = Firestore.firestore()
-            db.collection("users").addDocument(data : ["firstName " : userName1  ,  "lastName": userName2 ,"uid" : result?.user.uid]  ) {(error) in
-
+                db.collection("users").addDocument(data : ["firstName " : userName1  ,  "lastName": userName2 , "email" : emailLabel.text! , "uid" : result?.user.uid]  ) {(error) in
+                    errorLabel.isHidden = true
 
         }
                 
                 print(result?.user.email ?? "no email")
             } else {
                 print(error?.localizedDescription ?? "")
+                errorLabel.isHidden = false
             }
         
         

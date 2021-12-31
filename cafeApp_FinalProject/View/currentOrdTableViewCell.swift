@@ -19,7 +19,8 @@ protocol CellOrder {
 
 class currentOrdTableViewCell: UITableViewCell {
       
-        var indext: Int = 0
+    @IBOutlet weak var backgroundCellOrd: UIImageView!
+    var indext: Int = 0
         let db = Database.database().reference()
         var titleStr = ""
         var productObj: products!
@@ -28,6 +29,7 @@ class currentOrdTableViewCell: UITableViewCell {
     
     
     
+    @IBOutlet weak var viewCellOrder: UIView!
     
     @IBOutlet weak var viewOrder: UIView!
     
