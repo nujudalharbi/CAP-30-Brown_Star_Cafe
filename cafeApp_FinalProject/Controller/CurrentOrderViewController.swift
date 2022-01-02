@@ -9,9 +9,18 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class CurrentOrderViewController: UIViewController  , UITableViewDelegate , UITableViewDataSource , CellOrder {
+class CurrentOrderViewController: UIViewController  , UITableViewDelegate , UITableViewDataSource , CellOrder , EditCellOrder{
+    
+    
+    
+    
   var hide = true
 //    var lastCell
+    
+    
+    
+    
+    
     @IBAction func CheckOut(_ sender: Any) {
 
         orderArr.map { $0.canEdit = !$0.canEdit }
@@ -19,9 +28,7 @@ class CurrentOrderViewController: UIViewController  , UITableViewDelegate , UITa
         hide = !hide
         tabelView.reloadData()
         
-//        (sender as AnyObject).setTitle("Clicked", for: .normal)
-        
-//        ?.isUserInteractionEnabled = false
+
     }
     
     func edit(docID: String) {
@@ -108,6 +115,7 @@ class CurrentOrderViewController: UIViewController  , UITableViewDelegate , UITa
                  cell.productObj = orderArr[indexPath.row]
                  cell.delegate = self
          
+         
 //         cell.isUserInteractionEnabled = orderArr[indexPath.row].canEdit
          
         cell.titleOrder?.text = orderArr[indexPath.row].title
@@ -151,34 +159,17 @@ class CurrentOrderViewController: UIViewController  , UITableViewDelegate , UITa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let VC = storyboard?.instantiateViewController(withIdentifier: "editID") as! EditOrderViewController
-
-//        VC.orderv = 
         self.navigationController?.show(VC, sender: true)
-        
-        
-        
-        
-        
     }
  
     @IBAction func closeOrderBtn(_ sender: Any) {
-        
-//        dbStore.collection("Orders").addDocument(
-//            data: ["status" : "close"])
-        
-//        let dbRef = Firestore.firestore()
-//
-//        let order = ["title" : nil ,
-//                     "noteOrder" : nil , "qunatity" : nil ,"status":  "close" ]
-//        dbRef.collection("Orders").addDocument(data: order)
-//
-//        print ("added to DB")
+        for order in orderArr {
+            let docRef = dbStore.collection("Orders").document(order.getID())
+            docRef.updateData(["status" : "closed"])
+        }
     }
-        
-        
-        
-        
-    }
+    
+}
     
     
     

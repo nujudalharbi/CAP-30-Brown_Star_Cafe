@@ -27,8 +27,8 @@ class tabelNumViewController: UIViewController {
     
     
     func writeToFirestore() {
-        dbStore.collection("users").addDocument(
-            data: ["Num" : tabelNum.text ?? ""])
+//        dbStore.collection("Places").addDocument(
+//            data: ["Num" : tabelNum.text ?? ""])
     }
     override func viewDidLoad() {
         super.viewDidLoad()

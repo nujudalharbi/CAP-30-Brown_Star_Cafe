@@ -22,6 +22,8 @@ class cartViewController: UIViewController , UITableViewDelegate , UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "cartID") as! cratTableViewCell
        
         cell.orderLbl.text = orderArr[indexPath.row].title
+        
+         cell.closedLbl.text = orderArr[indexPath.row].status
         cell.viewCellCloseOrd.layer.cornerRadius = cell.viewCellCloseOrd.frame.height / 2
         
         cell.backgroundCell.layer.cornerRadius = cell.backgroundCell.frame.height / 2

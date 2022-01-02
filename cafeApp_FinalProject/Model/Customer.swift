@@ -8,8 +8,8 @@
 import Foundation
 struct Customer {
     
-    var firstName : String
+    var nameCustomer : String
 //    var lastName : String
-    var email : String
+    var emailCustomer : String
     
 }

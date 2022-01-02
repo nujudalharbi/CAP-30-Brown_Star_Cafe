@@ -30,14 +30,15 @@ class SignUpViewController: UIViewController {
             
             
             if (error == nil){
-                let detailVc = self.storyboard?.instantiateViewController(withIdentifier: "scanID") as! ScanCodeViewController
-                self.navigationController?.show(detailVc, sender: self)
+//                let detailVc = self.storyboard?.instantiateViewController(withIdentifier: "scanID") as! ScanCodeViewController
+//                self.navigationController?.show(detailVc, sender: self)
             
             
                 let db = Firestore.firestore()
-                db.collection("users").addDocument(data : ["firstName " : userName1  ,  "lastName": userName2 , "email" : emailLabel.text! , "uid" : result?.user.uid]  ) {(error) in
+                let doc = db.collection("users").document(Auth.auth().currentUser!.uid)
+                
+                doc.setData(["firstName " : userName1  ,  "lastName": userName2 , "email" : emailLabel.text! , "uid" : result?.user.uid]  ) { (error) in
                     errorLabel.isHidden = true
-
         }
                 
                 print(result?.user.email ?? "no email")

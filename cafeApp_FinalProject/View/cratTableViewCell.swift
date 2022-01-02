@@ -9,6 +9,7 @@ import UIKit
 
 class cratTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var closedLbl: UILabel!
     @IBOutlet weak var backgroundCell: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()

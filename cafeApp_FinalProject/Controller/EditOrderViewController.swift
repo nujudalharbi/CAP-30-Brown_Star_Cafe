@@ -21,7 +21,7 @@ class EditOrderViewController: UIViewController {
     let db = Database.database().reference()
     
     var productObj: products!
-    var delegate: CellOrder!
+    var delegate: EditCellOrder!
     var indext: Int = 0
     
     
@@ -35,7 +35,7 @@ class EditOrderViewController: UIViewController {
     func edit(docID: String) {
 //        let ordercell = db.collection("Orders").document(docID)
 
-        // Set the "capital" field of the city 'DC'
+//         Set the "capital" field of the city 'DC'
 //        ordercell.updateData([
 //            "capital": true
 //        ]) { err in
@@ -52,9 +52,9 @@ class EditOrderViewController: UIViewController {
 
     @IBAction func addCloseOrder(_ sender: Any) {
         
-//
-//        guard let docID = productObj.id else { return }
-//        delegate.edit(docID: docID)
+
+        guard let docID = productObj.id else { return }
+        delegate.edit(docID: docID)
         
     }
 }

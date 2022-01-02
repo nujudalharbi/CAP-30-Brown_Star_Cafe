@@ -58,8 +58,8 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
                        
                        //
                        self.writeToFirestore(str: object.stringValue!)
-                       let tabvc = self.storyboard?.instantiateViewController(withIdentifier: "tabid") as! UITabBarController
-                       self.navigationController?.show(tabvc, sender: nil)
+//                       let tabvc = self.storyboard?.instantiateViewController(withIdentifier: "tabid") as! UITabBarController
+//                       self.navigationController?.show(tabvc, sender: nil)
                        
                    }))
                    present(alert, animated: true , completion: nil)

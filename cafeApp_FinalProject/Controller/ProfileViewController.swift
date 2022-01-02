@@ -10,6 +10,7 @@ import Firebase
 import FirebaseDatabase
 import FirebaseFirestore
 import FirebaseStorage
+import FirebaseAuth
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate , UICollectionViewDelegate, UICollectionViewDataSource  {
     
@@ -29,16 +30,16 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     func infoUser(){
         if let user = Auth.auth().currentUser?.uid{
             let ref = dbStore.collection("users").document(user)
-            ref.getDocument{ [self]
+            ref.getDocument{
                 (document , error ) in
                 if let document = document , document.exists{
                     
-                    _ = document.data().map(String.init(describing: )) ?? "nil"
+                   let dataDecripition  = document.data().map(String.init(describing: )) ?? "nil"
                     
-                    self.nameUserLbl.text = document.data()? ["firstName "] as? String
+                    self.nameUserLbl.text = document.data()? ["firstName"] as? String
                     self.emailUser.text = document.data()? ["email"] as? String
                     
-                    _ = Customer(firstName: nameUserLbl.text!, email:  emailUser.text!)
+                    _ = Customer(nameCustomer: self.nameUserLbl.text ?? "", emailCustomer : self.emailUser.text!)
                     print ("......")
                 }
                 else {
@@ -54,7 +55,29 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         
     }
     
+    @IBAction func tapPressed(_ sender: Any) {
+        
+       
+        print ("...")
+        
+        let alertItem = UIAlertController(title: "Are you sure to Delete?!", message: nil, preferredStyle: .alert)
+        alertItem.addAction(UIAlertAction(title: "yes", style: .default, handler: { [self]action in
+             self.imageCloud.removeFromSuperview()
+
+          }))
+          alertItem.addAction(UIAlertAction(title: "no", style: .default, handler: {action in
+//              self.openCamera()
+          }))
+        
+        
+        
+        
+          present(alertItem, animated: true, completion: nil)
     
+        
+        
+        
+    }
     
     
     
@@ -87,6 +110,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         super.viewDidLoad()
         configureControls()
         infoUser()
+        downloadImagesFromCloud()
+    
     }
 
     // MARK: Configuration for UIImagePickerView and UICollectionView
@@ -106,39 +131,19 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     
     // MARK: IBActions
     @IBAction func onDownloadPressed(_ sender: UIButton) {
-        downloadImagesFromCloud()
+//        downloadImagesFromCloud()
     }
     
     @IBAction func onUploadPressed(_ sender: UIButton) {
         
         // Show Image Library to choose an image ✅
         present(picker, animated: true, completion: nil)
+    
     }
     
     // MARK: Download Multiple images from FB and populate in a Collection View
     func downloadImagesFromCloud() {
-        
-//        
-//        let storageRef = Storage.storage().reference()
-//        let folderRef = storageRef.child("Cloud")
-//
-//        folderRef.listAll { snapshot, error in
-//            print (snapshot.items.count)
-//            
-//            for (index, item) in snapshot.items.enumerated() {
-               // MARK: Download the image and save it to an array
-//                item.getData(maxSize: Int64.max) { data, error in
-//                    guard let data = data else { return }
-//                    self.imgArray.append(UIImage(data: data)!)
-//                    DispatchQueue.main.async {
-//                        self.imagesCollection.reloadData()
-//                        self.downloadProgress.progress =  Float(index + 1 / snapshot.items.count)
-//                    }
-//                }
-//            }
-//        }
-//    }
-//
+
     
     
     let storageRef = Storage.storage().reference()
