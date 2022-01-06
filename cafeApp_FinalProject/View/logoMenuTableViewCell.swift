@@ -9,6 +9,7 @@ import UIKit
 
 class logoMenuTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var logoImg: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

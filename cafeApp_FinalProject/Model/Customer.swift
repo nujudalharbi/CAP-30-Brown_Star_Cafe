@@ -9,7 +9,18 @@ import Foundation
 struct Customer {
     
     var nameCustomer : String
-//    var lastName : String
+
     var emailCustomer : String
     
+    
+//    ----------------------
+    
+    func getName() -> String{
+       return nameCustomer
+        
+    }
+    func getEmail() -> String{
+        return emailCustomer
+        
+    }
 }

@@ -9,11 +9,18 @@ import UIKit
 import FirebaseDatabase
 import FirebaseFirestore
 import Firebase
-class menuTableViewController: UITableViewController {
+class MenuTableViewController: UITableViewController {
+    
+    
+//    ------------------- declear a varible
 
     var productList  =  [ products ]()
     var refProduct : DatabaseReference!
     let dbStore = Firestore.firestore()
+    
+    
+    
+    
 
 //    -----------------------------------
     // TODO: Read from Firestore
@@ -22,9 +29,7 @@ class menuTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.register(UINib(nibName : "logoMenuTableViewCell", bundle : nil ) ,forCellReuseIdentifier: "logoID")
-        
+       
         
         tableView.register(UINib(nibName : "menuTableViewCell", bundle : nil ) ,forCellReuseIdentifier: "ProductID")
         tableView.rowHeight = 180
@@ -60,20 +65,15 @@ class menuTableViewController: UITableViewController {
 
 
     
-//  -------------------------------
-//
-    
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
+//  ------------------------------- func delegate 
+
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         return productList.count
     }
     
-    
+//    -----------------------
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductID")as! menuTableViewCell
         let pro : products
@@ -97,20 +97,18 @@ class menuTableViewController: UITableViewController {
         return cell
        
     }
-    
-//--------------------------------
+//    -------------------
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let VC = storyboard?.instantiateViewController(withIdentifier: "DetileID") as! MenuDetailViewController
 
         let selectedCell = tableView.cellForRow(at: indexPath) as! menuTableViewCell
         
-      // performSegue(withIdentifier: "detailsID", sender: nil)
-        VC.titleCoffee = productList[indexPath.row].title!
-        VC.priceCoffee = productList[indexPath.row].price!
+        VC.titleCoffee = productList[indexPath.row].getTitle()
+        VC.priceCoffee = productList[indexPath.row].getPrice()
         VC.imageDetails = selectedCell.imagesProduct.image
         
-        VC.descriptionCoffee = productList[indexPath.row ].descrabition!
+        VC.descriptionCoffee = productList[indexPath.row ].getDescrabtion()
         self.navigationController?.show(VC, sender: true)
     }
     

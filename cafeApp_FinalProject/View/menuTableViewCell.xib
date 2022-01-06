@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,17 +24,18 @@
                                 <rect key="frame" x="5" y="5" width="294" height="62"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YzD-iQ-f5H">
-                                <rect key="frame" x="8" y="-4" width="72" height="80"/>
+                                <rect key="frame" x="8" y="-13" width="72" height="93"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="E4a-Cu-DbG"/>
+                                    <constraint firstAttribute="height" constant="93" id="E4a-Cu-DbG"/>
                                     <constraint firstAttribute="width" constant="72" id="dZp-Nr-BiG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jK-uX-iK0" customClass="p">
-                                <rect key="frame" x="88" y="8" width="208" height="56"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jK-uX-iK0" customClass="p">
+                                <rect key="frame" x="100" y="8" width="196" height="56"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <size key="shadowOffset" width="0.0" height="7"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.5553095414" green="0.46915124930000002" blue="0.34592308519999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -47,8 +49,8 @@
                             <constraint firstAttribute="trailing" secondItem="BpI-eN-fle" secondAttribute="trailing" constant="5" id="eJQ-hd-BzF"/>
                             <constraint firstAttribute="bottom" secondItem="BpI-eN-fle" secondAttribute="bottom" constant="5" id="l0b-Ad-W23"/>
                             <constraint firstItem="BpI-eN-fle" firstAttribute="leading" secondItem="yJu-Jp-Foe" secondAttribute="leading" constant="5" id="s95-DK-Byv"/>
-                            <constraint firstItem="6jK-uX-iK0" firstAttribute="leading" secondItem="YzD-iQ-f5H" secondAttribute="trailing" constant="8" id="uVk-C6-QRO"/>
-                            <constraint firstItem="YzD-iQ-f5H" firstAttribute="centerY" secondItem="yJu-Jp-Foe" secondAttribute="centerY" id="vkY-n5-JE7"/>
+                            <constraint firstItem="6jK-uX-iK0" firstAttribute="leading" secondItem="YzD-iQ-f5H" secondAttribute="trailing" constant="20" id="uVk-C6-QRO"/>
+                            <constraint firstItem="YzD-iQ-f5H" firstAttribute="centerY" secondItem="yJu-Jp-Foe" secondAttribute="centerY" constant="-2.5" id="vkY-n5-JE7"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -71,5 +73,8 @@
     </objects>
     <resources>
         <image name="Screen Shot 1443-05-27 at 6.54.34 PM" width="288" height="124"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

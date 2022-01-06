@@ -11,23 +11,24 @@ import FirebaseDatabase
 
 
 
-protocol CellOrder {
-    func delete(docID: String)
- 
-}
+//protocol CellOrder {
+//    func delete(docID: String)
+//
+//}
 
 
-class currentOrdTableViewCell: UITableViewCell {
+class OrderTableViewCell: UITableViewCell {
       
     @IBOutlet weak var backgroundCellOrd: UIImageView!
     var indext: Int = 0
         let db = Database.database().reference()
         var titleStr = ""
-        var productObj: products!
-        var delegate: CellOrder!
+//        var productObj: products!
+//        var delegate: CellOrder!
     
     
     
+    @IBOutlet weak var qauntityLbl: UILabel!
     
     @IBOutlet weak var viewCellOrder: UIView!
     
@@ -46,8 +47,8 @@ class currentOrdTableViewCell: UITableViewCell {
     
     
     @IBAction func deleteBtn(_ sender: Any) {
-        guard let docID = productObj.id else { return }
-        delegate.delete(docID: docID)
+//        guard let docID = productObj.id else { return }
+//        delegate.delete(docID: docID)
     }
     
 

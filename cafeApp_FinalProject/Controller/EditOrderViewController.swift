@@ -10,51 +10,77 @@ import UIKit
 import FirebaseFirestore
 import FirebaseDatabase
 
-protocol EditCellOrder {
- 
-    func edit(docID: String)
-}
+
 
 class EditOrderViewController: UIViewController {
     
     
-    let db = Database.database().reference()
     
-    var productObj: products!
-    var delegate: EditCellOrder!
-    var indext: Int = 0
+//     ------------------ declear a varible
     
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var counter = 0
+    var selectedOrder = products()
+    
 
+    let dbStore = Firestore.firestore()
+    
+    
+    
+    
+    @IBOutlet weak var editTitleText: UITextField!
+    
+ 
+    @IBAction func increaseBtn(_ sender: Any) {
+        counter += 1
+        quantityLbl.text = String (counter)
+        
     }
+    @IBAction func decreaseBtn(_ sender: Any) {
+        
+        
+        if (counter == 0){
+            return quantityLbl.text = String (counter)
+        }else{
+        counter -= 1
+      return quantityLbl.text = String (counter)
+        }
+    }
+    @IBOutlet weak var quantityLbl: UILabel!
     
+    
+    
+//     ----------------- update title and qunatity order and save firebase
 
-    func edit(docID: String) {
-//        let ordercell = db.collection("Orders").document(docID)
+    func edit() {
 
-//         Set the "capital" field of the city 'DC'
-//        ordercell.updateData([
-//            "capital": true
-//        ]) { err in
-//            if let err = err {
-//                print("Error updating document: \(err)")
-//            } else {
-//                print("Document successfully updated")
-//            }
-//        }
-        
-        
+   
+              
+        let washingtonRef = dbStore.collection("Orders").document(selectedOrder.id!)
 
+    
+        washingtonRef.updateData(["title" :editTitleText.text
+        ,"qunatity": quantityLbl.text
+    ]) { err in
+        if let err = err {
+            print("Error updating document: \(err)")
+        } else {
+            print("Document successfully updated")
+        }
+    }
     }
 
     @IBAction func addCloseOrder(_ sender: Any) {
         
-
-        guard let docID = productObj.id else { return }
-        delegate.edit(docID: docID)
+edit()
         
+    }
+    
+//    ---------------------------------
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
     }
 }

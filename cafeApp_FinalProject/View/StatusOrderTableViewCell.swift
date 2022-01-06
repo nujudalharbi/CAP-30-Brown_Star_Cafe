@@ -7,7 +7,7 @@
 
 import UIKit
 
-class cratTableViewCell: UITableViewCell {
+class StatusOrderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var closedLbl: UILabel!
     @IBOutlet weak var backgroundCell: UIImageView!

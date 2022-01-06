@@ -11,16 +11,19 @@ import FirebaseDatabase
 import FirebaseFirestore
 
 class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsDelegate {
+    
+
     var video = AVCaptureVideoPreviewLayer()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//      creating session
         let session = AVCaptureSession()
 //        --------
         
         do{
+//     1    define capture device
             guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else { return  }
             
           let input = try AVCaptureDeviceInput(device : captureDevice)
@@ -31,9 +34,11 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
         catch{
             print("error")
         }
+        
+//        2
         let output = AVCaptureMetadataOutput()
         session.addOutput(output)
-        
+//         3
         output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         output.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
         video = AVCaptureVideoPreviewLayer(session: session)
@@ -58,8 +63,8 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
                        
                        //
                        self.writeToFirestore(str: object.stringValue!)
-//                       let tabvc = self.storyboard?.instantiateViewController(withIdentifier: "tabid") as! UITabBarController
-//                       self.navigationController?.show(tabvc, sender: nil)
+                       let tabvc = self.storyboard?.instantiateViewController(withIdentifier: "tabid") as! UITabBarController
+                       self.navigationController?.show(tabvc, sender: nil)
                        
                    }))
                    present(alert, animated: true , completion: nil)

@@ -10,47 +10,51 @@ import Firebase
 import FirebaseAuth
 
 class LoginViewController: UIViewController {
-
-    @IBOutlet weak var emailLogin: UITextField!
     
-    @IBOutlet weak var loginOutlet: UIButton!
+    
+//-----------------------outlet
+    
+    @IBOutlet weak var emailLogin: UITextField!
     
     @IBOutlet weak var passwordLogin: UITextField!
     @IBOutlet weak var lbStatus: UILabel!
+    
+    
+//    ------------------------
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
-
-        // Do any additional setup after loading the view.
+        
+        lbStatus.isHidden = true
     }
     
+    
+//    -------------------------------------
+    
     @IBAction func loginBtn(_ sender: Any) {
+
+//       register a count
         
         Auth.auth().signIn(withEmail: emailLogin.text!, password: passwordLogin.text!) { result , error  in
+            
+            //            Check the result
+            
                    if (error == nil){
-//                       let detailVc = self.storyboard?.instantiateViewController(withIdentifier: "scanID") as! ScanCodeViewController
-//                       self.navigationController?.show(detailVc, sender: self)
+                       let VC = self.storyboard?.instantiateViewController(withIdentifier: "transtionID") as! TransitionQRCodeViewController
+                       self.navigationController?.show(VC, sender: self)
                        print(result?.user.email ?? "")
+                       
                        self.lbStatus.text = "successfully login"
 
                    }else{
                        
                        print(error?.localizedDescription ?? "")
+                       self.lbStatus.isHidden = false
                        self.lbStatus.text = "email or password is wrong"
                        
                    }
                }
                
            }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 }
