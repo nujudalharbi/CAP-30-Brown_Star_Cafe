@@ -9,6 +9,7 @@ import UIKit
 import AVFoundation
 import FirebaseDatabase
 import FirebaseFirestore
+import Firebase
 
 class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsDelegate {
     
@@ -69,10 +70,7 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
                    }))
                    present(alert, animated: true , completion: nil)
                }
-               
-               
            }
-            
         }
     }
     
@@ -80,9 +78,11 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
     
     let dbStore = Firestore.firestore()
 
-
     func writeToFirestore(str : String) {
-        dbStore.collection("Place").addDocument(
-            data: ["url" : str])
+        let docId = "HykbE8RpOjQ9CvNAfx6v"
+         
+        // save in order collection
+        let doc = dbStore.collection("Order").document(docId)
+        doc.updateData(["tableNum" : 5])
     }
 }

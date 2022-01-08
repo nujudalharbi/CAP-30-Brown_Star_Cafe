@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJu-Jp-Foe">
                         <rect key="frame" x="10" y="5" width="304" height="72"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 1443-05-27 at 6.54.34 PM" translatesAutoresizingMaskIntoConstraints="NO" id="BpI-eN-fle">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 1443-05-27 at 6.54.34 PM" translatesAutoresizingMaskIntoConstraints="NO" id="BpI-eN-fle">
                                 <rect key="frame" x="5" y="5" width="294" height="62"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YzD-iQ-f5H">
@@ -32,13 +32,13 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jK-uX-iK0" customClass="p">
                                 <rect key="frame" x="100" y="8" width="196" height="56"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="27"/>
+                                <color key="textColor" red="0.5553095414" green="0.46915124930000002" blue="0.34592308519999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <size key="shadowOffset" width="0.0" height="7"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.5553095414" green="0.46915124930000002" blue="0.34592308519999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BpI-eN-fle" firstAttribute="top" secondItem="yJu-Jp-Foe" secondAttribute="top" constant="5" id="8dB-da-W2u"/>
                             <constraint firstAttribute="bottom" secondItem="6jK-uX-iK0" secondAttribute="bottom" constant="8" id="O4a-du-leo"/>

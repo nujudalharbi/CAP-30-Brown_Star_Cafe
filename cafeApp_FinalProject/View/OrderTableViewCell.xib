@@ -19,30 +19,30 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Nu-ch-wel">
                         <rect key="frame" x="10" y="5" width="300" height="85"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 1443-05-27 at 6.54.34 PM" translatesAutoresizingMaskIntoConstraints="NO" id="9Mx-7l-iKj">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 1443-05-27 at 6.54.34 PM" translatesAutoresizingMaskIntoConstraints="NO" id="9Mx-7l-iKj">
                                 <rect key="frame" x="5" y="5" width="290" height="75"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9n-RJ-G2T">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9n-RJ-G2T">
                                 <rect key="frame" x="81" y="26" width="164" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="164" id="r4m-X4-ind"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="27"/>
+                                <color key="textColor" red="0.5288920157" green="0.44683249860000002" blue="0.3294666202" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk7-1i-zP6">
-                                <rect key="frame" x="36" y="26" width="37" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk7-1i-zP6">
+                                <rect key="frame" x="36" y="26" width="37" height="43"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="30"/>
                                 <color key="textColor" red="0.5" green="0.20994487581261495" blue="0.214607838540403" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.5553095414" green="0.46915124930000002" blue="0.34592308519999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="a9n-RJ-G2T" firstAttribute="leading" secondItem="Uk7-1i-zP6" secondAttribute="trailing" constant="8" symbolic="YES" id="2qT-i1-bUb"/>
                             <constraint firstItem="9Mx-7l-iKj" firstAttribute="leading" secondItem="7Nu-ch-wel" secondAttribute="leading" constant="5" id="83M-bP-QpI"/>
-                            <constraint firstItem="Uk7-1i-zP6" firstAttribute="bottom" secondItem="a9n-RJ-G2T" secondAttribute="bottom" id="ErJ-Dc-IY7"/>
+                            <constraint firstItem="Uk7-1i-zP6" firstAttribute="bottom" secondItem="a9n-RJ-G2T" secondAttribute="bottom" constant="10" id="ErJ-Dc-IY7"/>
                             <constraint firstAttribute="trailing" secondItem="9Mx-7l-iKj" secondAttribute="trailing" constant="5" id="Mdk-tH-Wnh"/>
                             <constraint firstAttribute="bottomMargin" secondItem="a9n-RJ-G2T" secondAttribute="bottom" constant="18" id="d44-PL-rEb"/>
                             <constraint firstItem="a9n-RJ-G2T" firstAttribute="leading" secondItem="7Nu-ch-wel" secondAttribute="leadingMargin" constant="73" id="euB-Fy-2Eb"/>
