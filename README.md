@@ -23,11 +23,13 @@ User stories:
 	
 Usage :
 
-	•	View Controller .
+        •        Eleven interfaces .
+
+	•	 Two Models : Struct (Customer ) and Class (Products)  
+
+	•	 View Controller .
 	
-	•	 UITableViewController.
-	
-	•	 Collection View.
+	•	 UITableViewController and Collection View .
 	
 	•	 Navigation Controllers and Tab Bar Controllers. 
 	
@@ -38,6 +40,8 @@ Usage :
 	•	 Back-end(Firebase)
 	
 Known Issues :
+
+ Add Order and Save in firebase.
 
 Upcoming Features :
 
