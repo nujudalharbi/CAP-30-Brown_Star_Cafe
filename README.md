@@ -22,6 +22,7 @@ User stories:
 	•	As a customer , If you are a fan of the art coffee, you can save the pictures in the file and have it like a CV when we need an employee .
 	
 Usage :
+
 	•	View Controller .
 	
 	•	 UITableViewController.
@@ -39,5 +40,10 @@ Usage :
 Known Issues :
 
 Upcoming Features :
+
+	•    Paying off.
+
+	•    Order tracking .
+
 
 
