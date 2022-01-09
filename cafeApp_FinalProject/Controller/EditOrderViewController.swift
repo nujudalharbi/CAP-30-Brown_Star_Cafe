@@ -9,7 +9,7 @@ import UIKit
 
 import FirebaseFirestore
 import FirebaseDatabase
-
+import Firebase
 
 
 class EditOrderViewController: UIViewController {
@@ -21,7 +21,7 @@ class EditOrderViewController: UIViewController {
     
     
     var counter = 0
-    var selectedOrder = products()
+    var selectedOrder = Products()
     
 
     let dbStore = Firestore.firestore()
@@ -73,7 +73,7 @@ class EditOrderViewController: UIViewController {
 
     @IBAction func addCloseOrder(_ sender: Any) {
         
-edit()
+         edit()
         
     }
     

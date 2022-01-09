@@ -84,7 +84,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
        
        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCellID", for: indexPath) as! imageCellCollectionViewCell
        cell.cellImage.image = imgArray[indexPath.row]
-       cell.cellImage.layer.cornerRadius = cell.cellImage.frame.height / 2
+//       cell.cellImage.layer.cornerRadius = cell.cellImage.frame.height / 2
        return cell
    }
 //     ---------------------

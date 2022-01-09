@@ -14,7 +14,7 @@ class MenuTableViewController: UITableViewController {
     
 //    ------------------- declear a varible
 
-    var productList  =  [ products ]()
+    var productList  =  [ Products ]()
     var refProduct : DatabaseReference!
     let dbStore = Firestore.firestore()
     
@@ -46,7 +46,7 @@ class MenuTableViewController: UITableViewController {
                         let desc = object["descrabition"] as? String
                         let status = object["status"] as? String
                         
-                        let pro = products(title: tit, descrabition: desc, image: img, price: price,
+                        let pro = Products(title: tit, descrabition: desc, image: img, price: price,
                                            status: status)
                         self.productList.append(pro)
                         
@@ -76,7 +76,7 @@ class MenuTableViewController: UITableViewController {
 //    -----------------------
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductID")as! menuTableViewCell
-        let pro : products
+        let pro : Products
         pro = productList[indexPath.row]
         if let imageName = pro.image {
             let url = URL(string: imageName)
@@ -92,7 +92,7 @@ class MenuTableViewController: UITableViewController {
 //        layout cell and image
         
         cell.viewCell.layer.cornerRadius = cell.viewCell.frame.height / 2
-        cell.imagesProduct.layer.cornerRadius = cell.imagesProduct.frame.height / 2
+//        cell.imagesProduct.layer.cornerRadius = cell.imagesProduct.frame.height / 2
         cell.backgroundCellImg.layer.cornerRadius = cell.backgroundCellImg.frame.height / 2
         return cell
        

@@ -44,14 +44,14 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9M-CC-vJa">
-                        <rect key="frame" x="24" y="12" width="88" height="43"/>
+                        <rect key="frame" x="24" y="12" width="127" height="43"/>
                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="27"/>
                         <color key="textColor" red="0.4639757786" green="0.3919882515" blue="0.28902786790000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="R9M-CC-vJa" secondAttribute="trailing" constant="208" id="Ae5-nl-CtE"/>
+                    <constraint firstAttribute="trailing" secondItem="R9M-CC-vJa" secondAttribute="trailing" constant="169" id="Ae5-nl-CtE"/>
                     <constraint firstAttribute="bottom" secondItem="scQ-yb-taV" secondAttribute="bottom" constant="5" id="Sre-Wc-c6J"/>
                     <constraint firstItem="R9M-CC-vJa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="YDq-X7-ugn"/>
                     <constraint firstAttribute="bottom" secondItem="R9M-CC-vJa" secondAttribute="bottom" constant="11" id="bab-4Z-5jM"/>

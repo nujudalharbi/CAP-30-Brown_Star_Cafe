@@ -63,7 +63,7 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
                        UIPasteboard.general.string = object.stringValue
                        
                        //
-                       self.writeToFirestore(str: object.stringValue!)
+//                       self.writeToFirestore(docId : object.stringValue! , tableNum : object.stringValue!)
                        let tabvc = self.storyboard?.instantiateViewController(withIdentifier: "tabid") as! UITabBarController
                        self.navigationController?.show(tabvc, sender: nil)
                        
@@ -77,12 +77,14 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
     
     
     let dbStore = Firestore.firestore()
-
-    func writeToFirestore(str : String) {
-        let docId = "HykbE8RpOjQ9CvNAfx6v"
-         
+//
+//    func writeToFirestore(docId : String , tableNum  : String) {
+//
+//
         // save in order collection
-        let doc = dbStore.collection("Order").document(docId)
-        doc.updateData(["tableNum" : 5])
-    }
+//
+//
+//        let doc = dbStore.collection("Order").document(docId)
+//        doc.updateData(["tableNum" : tableNum ])
+//    }
 }

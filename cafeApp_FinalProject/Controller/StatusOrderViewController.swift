@@ -13,7 +13,7 @@ class StatusOrderController: UIViewController , UITableViewDelegate , UITableVie
     
 //   ------------------------ declear a varible
     let dbStore = Firestore.firestore()
-    var orderArr = [products]()
+    var orderArr = [Products]()
     
 
 
@@ -31,7 +31,7 @@ class StatusOrderController: UIViewController , UITableViewDelegate , UITableVie
             self.orderArr.removeAll()
             for doc in snapshot.documents {
                 let dict = doc.data() as [String: Any]
-                let product = products(title: dict["title"] as? String ?? "",
+                let product = Products(title: dict["title"] as? String ?? "",
                                        descrabition: dict["noteOrder"] as? String ?? "",
                                        image: dict["image"] as? String ?? "",
                                        price: dict["price"] as? Double ?? 0.0,

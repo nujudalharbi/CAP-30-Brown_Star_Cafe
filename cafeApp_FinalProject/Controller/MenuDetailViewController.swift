@@ -24,7 +24,7 @@ class MenuDetailViewController: UIViewController {
     
     var imageDetails: UIImage?
     
-    var orderArr = [products]()
+    var orderArr = [Products]()
     
     
 //    -------------------------- outlet

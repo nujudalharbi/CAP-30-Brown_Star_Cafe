@@ -27,10 +27,10 @@
 		91513BFB276F9322004FA9D6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 91513BFA276F9322004FA9D6 /* FirebaseStorage */; };
 		91513BFD276F9322004FA9D6 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 91513BFC276F9322004FA9D6 /* FirebaseStorageSwift-Beta */; };
 		91513BFF276F9C63004FA9D6 /* tabelNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91513BFE276F9C63004FA9D6 /* tabelNumViewController.swift */; };
-		91513C12276FA3D3004FA9D6 /* productItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91513C11276FA3D3004FA9D6 /* productItem.swift */; };
+		91513C12276FA3D3004FA9D6 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91513C11276FA3D3004FA9D6 /* Products.swift */; };
 		91513C15276FA45C004FA9D6 /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91513C13276FA45C004FA9D6 /* menuTableViewCell.swift */; };
 		91513C16276FA45C004FA9D6 /* menuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91513C14276FA45C004FA9D6 /* menuTableViewCell.xib */; };
-		91513C18276FA67F004FA9D6 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91513C17276FA67E004FA9D6 /* MenuTableViewController.swift */; };
+		91513C18276FA67F004FA9D6 /* menuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91513C17276FA67E004FA9D6 /* menuTableViewController.swift */; };
 		9166860B277D963D0073019C /* StatusOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166860A277D963D0073019C /* StatusOrderViewController.swift */; };
 		9166860E277D976D0073019C /* StatusOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166860C277D976D0073019C /* StatusOrderTableViewCell.swift */; };
 		9166860F277D976D0073019C /* StatusOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9166860D277D976D0073019C /* StatusOrderTableViewCell.xib */; };
@@ -59,10 +59,10 @@
 		91513BCC276F8359004FA9D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91513BE5276F8CF2004FA9D6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		91513BFE276F9C63004FA9D6 /* tabelNumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabelNumViewController.swift; sourceTree = "<group>"; };
-		91513C11276FA3D3004FA9D6 /* productItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productItem.swift; sourceTree = "<group>"; };
+		91513C11276FA3D3004FA9D6 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		91513C13276FA45C004FA9D6 /* menuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuTableViewCell.swift; sourceTree = "<group>"; };
 		91513C14276FA45C004FA9D6 /* menuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = menuTableViewCell.xib; sourceTree = "<group>"; };
-		91513C17276FA67E004FA9D6 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		91513C17276FA67E004FA9D6 /* menuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuTableViewController.swift; sourceTree = "<group>"; };
 		9166860A277D963D0073019C /* StatusOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusOrderViewController.swift; sourceTree = "<group>"; };
 		9166860C277D976D0073019C /* StatusOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusOrderTableViewCell.swift; sourceTree = "<group>"; };
 		9166860D277D976D0073019C /* StatusOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusOrderTableViewCell.xib; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				9177569E2782CA5700D70E1A /* TransitionQRCodeViewController.swift */,
 				917DE8612775F4CF00CB2A88 /* ScanCodeViewController.swift */,
 				91513BFE276F9C63004FA9D6 /* tabelNumViewController.swift */,
-				91513C17276FA67E004FA9D6 /* MenuTableViewController.swift */,
+				91513C17276FA67E004FA9D6 /* menuTableViewController.swift */,
 				9178BEE3277047AF0043CCA0 /* MenuDetailViewController.swift */,
 				917DE86327767D5F00CB2A88 /* OrderViewController.swift */,
 				9166860A277D963D0073019C /* StatusOrderViewController.swift */,
@@ -171,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				9177085C277C4FA20062E2D9 /* Customer.swift */,
-				91513C11276FA3D3004FA9D6 /* productItem.swift */,
+				91513C11276FA3D3004FA9D6 /* Products.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,7 +276,7 @@
 				91A15DEB2777410700DFE1CE /* EditOrderViewController.swift in Sources */,
 				917DE8622775F4CF00CB2A88 /* ScanCodeViewController.swift in Sources */,
 				9177569F2782CA5700D70E1A /* TransitionQRCodeViewController.swift in Sources */,
-				91513C12276FA3D3004FA9D6 /* productItem.swift in Sources */,
+				91513C12276FA3D3004FA9D6 /* Products.swift in Sources */,
 				917DE86427767D5F00CB2A88 /* OrderViewController.swift in Sources */,
 				91513BB8276F830A004FA9D6 /* SceneDelegate.swift in Sources */,
 				9178BEE4277047AF0043CCA0 /* MenuDetailViewController.swift in Sources */,
@@ -285,7 +285,7 @@
 				91513BE6276F8CF2004FA9D6 /* SignUpViewController.swift in Sources */,
 				918D5B662770A7F500AF69A6 /* ProfileViewController.swift in Sources */,
 				91A15DE527773A8B00DFE1CE /* OrderTableViewCell.swift in Sources */,
-				91513C18276FA67F004FA9D6 /* MenuTableViewController.swift in Sources */,
+				91513C18276FA67F004FA9D6 /* menuTableViewController.swift in Sources */,
 				9166860E277D976D0073019C /* StatusOrderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
