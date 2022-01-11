@@ -26,7 +26,6 @@
 		91513BF9276F9322004FA9D6 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 91513BF8276F9322004FA9D6 /* FirebaseFirestoreSwift-Beta */; };
 		91513BFB276F9322004FA9D6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 91513BFA276F9322004FA9D6 /* FirebaseStorage */; };
 		91513BFD276F9322004FA9D6 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 91513BFC276F9322004FA9D6 /* FirebaseStorageSwift-Beta */; };
-		91513BFF276F9C63004FA9D6 /* tabelNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91513BFE276F9C63004FA9D6 /* tabelNumViewController.swift */; };
 		91513C12276FA3D3004FA9D6 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91513C11276FA3D3004FA9D6 /* Products.swift */; };
 		91513C15276FA45C004FA9D6 /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91513C13276FA45C004FA9D6 /* menuTableViewCell.swift */; };
 		91513C16276FA45C004FA9D6 /* menuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91513C14276FA45C004FA9D6 /* menuTableViewCell.xib */; };
@@ -58,7 +57,6 @@
 		91513BC6276F830B004FA9D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91513BCC276F8359004FA9D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91513BE5276F8CF2004FA9D6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		91513BFE276F9C63004FA9D6 /* tabelNumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabelNumViewController.swift; sourceTree = "<group>"; };
 		91513C11276FA3D3004FA9D6 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		91513C13276FA45C004FA9D6 /* menuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuTableViewCell.swift; sourceTree = "<group>"; };
 		91513C14276FA45C004FA9D6 /* menuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = menuTableViewCell.xib; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 				91513BE5276F8CF2004FA9D6 /* SignUpViewController.swift */,
 				9177569E2782CA5700D70E1A /* TransitionQRCodeViewController.swift */,
 				917DE8612775F4CF00CB2A88 /* ScanCodeViewController.swift */,
-				91513BFE276F9C63004FA9D6 /* tabelNumViewController.swift */,
 				91513C17276FA67E004FA9D6 /* menuTableViewController.swift */,
 				9178BEE3277047AF0043CCA0 /* MenuDetailViewController.swift */,
 				917DE86327767D5F00CB2A88 /* OrderViewController.swift */,
@@ -271,7 +268,6 @@
 				91513BB6276F830A004FA9D6 /* AppDelegate.swift in Sources */,
 				91513C15276FA45C004FA9D6 /* menuTableViewCell.swift in Sources */,
 				9166860B277D963D0073019C /* StatusOrderViewController.swift in Sources */,
-				91513BFF276F9C63004FA9D6 /* tabelNumViewController.swift in Sources */,
 				917756A12782D07800D70E1A /* HomeViewController.swift in Sources */,
 				91A15DEB2777410700DFE1CE /* EditOrderViewController.swift in Sources */,
 				917DE8622775F4CF00CB2A88 /* ScanCodeViewController.swift in Sources */,

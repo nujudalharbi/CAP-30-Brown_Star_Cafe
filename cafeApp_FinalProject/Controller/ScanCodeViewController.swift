@@ -60,21 +60,7 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
                    let tabvc = self.storyboard?.instantiateViewController(withIdentifier: "tabid") as! UITabBarController
                    self.navigationController?.show(tabvc, sender: nil)
                    
-                   
-//                   let alert = UIAlertController(title: "qr code", message: object.stringValue , preferredStyle: .alert)
-//
-//                   alert.addAction(UIAlertAction(title: "No ", style: .default, handler: nil))
-//                   alert.addAction(UIAlertAction(title: "Ok ", style: .default, handler: {(nil) in
-//                       UIPasteboard.general.string = object.stringValue
-//                       self.session.stopRunning()
-//                       //
-//                      self.writeToFirestore(docId : object.stringValue! , tableNum : object.stringValue!)
-//                       let tabvc = self.storyboard?.instantiateViewController(withIdentifier: "tabid") as! UITabBarController
-//                       self.navigationController?.show(tabvc, sender: nil)
-//
-                       
-                  // }))
-                  // present(alert, animated: true , completion: nil)
+
                }
            }
         }
