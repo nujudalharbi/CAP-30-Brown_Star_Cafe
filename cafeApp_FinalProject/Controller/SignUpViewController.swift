@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController ,UITextFieldDelegate{
     
     
     
@@ -29,6 +29,53 @@ class SignUpViewController: UIViewController {
 //    ---------------------------------------
     
     @IBAction func addBtnAction(_ sender: Any) {
+        
+     Register()
+
+    }
+    
+//     -------------------------
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == firstName{
+            lastName.becomeFirstResponder()
+            
+        }else if (textField == lastName){
+            emailLabel.becomeFirstResponder()
+           
+        }else if (textField == emailLabel){
+            passWord.becomeFirstResponder()
+            
+        }else {
+            Register()
+            
+            
+        }
+        return true
+    }
+    
+//    ___________________________
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        errorLabel.isHidden = true
+        firstName.textColor = UIColor(named: "Color")
+
+        lastName.textColor = UIColor(named: "Color")
+        
+        emailLabel.textColor = UIColor(named: "Color")
+        
+        passWord.textColor = UIColor(named: "Color")
+        
+        firstName.delegate = self
+        lastName.delegate = self
+        emailLabel.delegate = self
+        passWord.delegate = self
+        
+    }
+    
+    func Register(){
         
         
         let userName1 = firstName.text!
@@ -66,25 +113,9 @@ class SignUpViewController: UIViewController {
         
     
                 }
-
-    }
-//     -------------------------
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
         
-        errorLabel.isHidden = true
-        firstName.textColor = UIColor(named: "Color")
-
-        lastName.textColor = UIColor(named: "Color")
-        
-        emailLabel.textColor = UIColor(named: "Color")
-        
-        passWord.textColor = UIColor(named: "Color")
         
     }
-    
-
    
 
 }

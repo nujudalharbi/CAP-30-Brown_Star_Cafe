@@ -16,11 +16,11 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
 
     var video = AVCaptureVideoPreviewLayer()
 
+    let session = AVCaptureSession()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 //      creating session
-        let session = AVCaptureSession()
 //        --------
         
         do{
@@ -53,22 +53,28 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
             
            if let object = metadataObjects[0] as? AVMetadataMachineReadableCodeObject
             {
+               self.session.stopRunning()
                if object.type == AVMetadataObject.ObjectType.qr {
+                   UserDefaults.standard.set(object.stringValue!, forKey: "tablenum")
+                   print(object.stringValue)
+                   let tabvc = self.storyboard?.instantiateViewController(withIdentifier: "tabid") as! UITabBarController
+                   self.navigationController?.show(tabvc, sender: nil)
                    
                    
-                   let alert = UIAlertController(title: "qr code", message: object.stringValue , preferredStyle: .alert)
-                   
-                   alert.addAction(UIAlertAction(title: "no ", style: .default, handler: nil))
-                   alert.addAction(UIAlertAction(title: "ok ", style: .default, handler: {(nil) in
-                       UIPasteboard.general.string = object.stringValue
+//                   let alert = UIAlertController(title: "qr code", message: object.stringValue , preferredStyle: .alert)
+//
+//                   alert.addAction(UIAlertAction(title: "No ", style: .default, handler: nil))
+//                   alert.addAction(UIAlertAction(title: "Ok ", style: .default, handler: {(nil) in
+//                       UIPasteboard.general.string = object.stringValue
+//                       self.session.stopRunning()
+//                       //
+//                      self.writeToFirestore(docId : object.stringValue! , tableNum : object.stringValue!)
+//                       let tabvc = self.storyboard?.instantiateViewController(withIdentifier: "tabid") as! UITabBarController
+//                       self.navigationController?.show(tabvc, sender: nil)
+//
                        
-                       //
-//                       self.writeToFirestore(docId : object.stringValue! , tableNum : object.stringValue!)
-                       let tabvc = self.storyboard?.instantiateViewController(withIdentifier: "tabid") as! UITabBarController
-                       self.navigationController?.show(tabvc, sender: nil)
-                       
-                   }))
-                   present(alert, animated: true , completion: nil)
+                  // }))
+                  // present(alert, animated: true , completion: nil)
                }
            }
         }
@@ -77,14 +83,11 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
     
     
     let dbStore = Firestore.firestore()
+
+    func writeToFirestore(docId : String , tableNum  : String) {
+//         save in order collection
+        let doc = dbStore.collection("Orders").document()
+        doc.updateData(["tableNum" : tableNum ])
 //
-//    func writeToFirestore(docId : String , tableNum  : String) {
-//
-//
-        // save in order collection
-//
-//
-//        let doc = dbStore.collection("Order").document(docId)
-//        doc.updateData(["tableNum" : tableNum ])
-//    }
+    }
 }

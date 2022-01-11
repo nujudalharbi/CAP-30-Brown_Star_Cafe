@@ -16,11 +16,11 @@ class Products{
     var id : String? = ""
     var qunatity : String = ""
     var status : String? = ""
-//    var tableNum : String? = ""
+    var tableNum : String? = ""
 
 //     -------------------------------
     
-    init(title : String? = "",  descrabition : String? = "" , image : String? = "", price : Double? = 0.0, id: String = "", qunatity : String = "", status: String? = "" ){
+    init(title : String? = "",  descrabition : String? = "" , image : String? = "", price : Double? = 0.0, id: String = "", qunatity : String = "", status: String? = ""  , tableNum : String? = ""){
         self.title = title
         self.descrabition = descrabition
         self.image = image
@@ -28,7 +28,7 @@ class Products{
         self.id = id
         self.qunatity = qunatity
         self.status = status
-//        self.tableNum = tableNum
+        self.tableNum = tableNum
     }
 //    -------------------------------
     

@@ -55,7 +55,14 @@ class StatusOrderController: UIViewController , UITableViewDelegate , UITableVie
        
         cell.orderLbl.text = orderArr[indexPath.row].title
         
-         cell.closedLbl.text = orderArr[indexPath.row].status
+//         cell.closedLbl.text = orderArr[indexPath.row].status
+        
+        if orderArr[indexPath.row].status == "open"{
+            cell.closedLbl.text = " please check the order 🔓"
+        }else {
+            cell.closedLbl.text = " ✓🔒"
+        }
+        
         cell.viewCellCloseOrd.layer.cornerRadius = cell.viewCellCloseOrd.frame.height / 2
         
         cell.backgroundCell.layer.cornerRadius = cell.backgroundCell.frame.height / 2

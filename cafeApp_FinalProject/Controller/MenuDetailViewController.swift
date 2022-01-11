@@ -17,9 +17,16 @@ class MenuDetailViewController: UIViewController {
     var titleCoffee = ""
     var descriptionCoffee  = ""
     var priceCoffee = 0.0
+    var counter = 0
+    
+    
+    
+   
 
     
-    var counter = 0
+    
+    
+   
 
     
     var imageDetails: UIImage?
@@ -67,8 +74,12 @@ class MenuDetailViewController: UIViewController {
         
         let dbRef = Firestore.firestore()
         
+        let tableNum = UserDefaults.standard.string(forKey: "tablenum")
+        
         let orderArray = ["title" : titDetiels.text! ,
-                     "noteOrder" : NoteTxt.text! , "qunatity" : quantityLbl.text! , "status" : "open"]
+                          "noteOrder" : NoteTxt.text! , "qunatity" : quantityLbl.text! , "status" : "open",
+                          "tableNum" : tableNum]
+        
         dbRef.collection("Orders").addDocument(data: orderArray)
         
         print ("added to DB")
@@ -93,7 +104,7 @@ class MenuDetailViewController: UIViewController {
             self.imgDetiels.image = imageDetails
 
         }
-        priceDet.text = String(priceCoffee)
+        priceDet.text = String(priceCoffee )
         
         
         NoteTxt.backgroundColor = UIColor.white
