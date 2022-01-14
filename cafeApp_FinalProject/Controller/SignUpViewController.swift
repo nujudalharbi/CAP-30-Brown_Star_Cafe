@@ -24,7 +24,8 @@ class SignUpViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var passWord: UITextField!
     
-   
+    @IBOutlet weak var signupBtn: UIButton!
+    
     
 //    ---------------------------------------
     
@@ -72,6 +73,12 @@ class SignUpViewController: UIViewController ,UITextFieldDelegate{
         lastName.delegate = self
         emailLabel.delegate = self
         passWord.delegate = self
+        
+        
+//        ------
+    signupBtn.setTitle(NSLocalizedString( "singnBtn" , comment: ""), for: .normal)
+
+      errorLabel.text = NSLocalizedString("errorLbl" , comment: "")
         
     }
     

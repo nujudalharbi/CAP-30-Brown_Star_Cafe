@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  cafeApp_FinalProject
+
+  Created by نجود  on 10/06/1443 AH.
+  
+*/
+"changeLanguage" = "عربي" ;
+"login"  =  "تسجيل الدخول" ;
+"signup"  =  "مستخدم جديد";
+
+
+"errorLbl" = "الايميل او كلمة المرور خطأ";
+"singnBtn" = "تسجيل";
+
+"descLbl"= "امسح الكود الموجود على الطاولة " ;
+"click here" = "اضغط هنا " ;
+
+
+
+"name" = "الاسم";
+"email"= "الايميل";
+"descProfile"="اذا كنت من محبي الرسم على القهوه ؟! فااملأ ملفك بابداعك";

@@ -77,6 +77,23 @@ class OrderViewController: UIViewController  , UITableViewDelegate , UITableView
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "orderID") as! OrderTableViewCell
 
+//         let pro : Products
+//         pro = orderArr[indexPath.row]
+//         if let imageName = pro.image {
+//             let url = URL(string: imageName)
+//             URLSession.shared.dataTask(with: url! ) { (data, _, _) in
+//                 if let data = data {
+//                     DispatchQueue.main.async {
+//                         cell.orderImg.image = UIImage(data: data)
+//                     }
+//                 }
+//             }.resume()
+//         }
+//         
+         
+         
+         
+         
          
         cell.titleOrder?.text = orderArr[indexPath.row].getTitle()
          cell.qauntityLbl?.text = orderArr[indexPath.row].getQunatity()
@@ -123,6 +140,12 @@ class OrderViewController: UIViewController  , UITableViewDelegate , UITableView
         tabelView.deleteRows(at: [indexPath], with: .fade)
     }
   }
+
+    
+    
+    
+    
+    
 }
 
 

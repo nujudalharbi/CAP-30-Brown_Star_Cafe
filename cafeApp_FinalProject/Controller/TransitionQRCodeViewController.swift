@@ -9,7 +9,15 @@ import UIKit
 
 class TransitionQRCodeViewController: UIViewController {
 
+//   --------------- outlet
     
+    @IBOutlet weak var descLbl: UILabel!
+    
+    @IBOutlet weak var clickLbl: UILabel!
+    
+    
+    
+//    ---------------------- tap gesture
     @IBAction func tapAction(_ sender: Any) {
         
         print(" Done action")
@@ -21,10 +29,13 @@ class TransitionQRCodeViewController: UIViewController {
     }
     
     
+//    -----------------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        descLbl.text = NSLocalizedString("descLbl" , comment: "")
+        clickLbl.text = NSLocalizedString("click here" , comment: "")
+         
         // Do any additional setup after loading the view.
     }
 

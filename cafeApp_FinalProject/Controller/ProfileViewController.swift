@@ -24,10 +24,16 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     var imgArray = [UIImage]()
 //   ---------------------
     
+    
+    
+    @IBOutlet weak var name: UILabel!
+    
     @IBOutlet weak var nameUserLbl: UILabel!
     
+    @IBOutlet weak var email: UILabel!
     @IBOutlet weak var emailUser: UILabel!
     
+    @IBOutlet weak var descProfile: UILabel!
     @IBOutlet weak var imageCloud: UIImageView!
   
     @IBOutlet weak var imagesCollection: UICollectionView!
@@ -42,7 +48,11 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         
      nameUserLbl.layer.cornerRadius = nameUserLbl.frame.height / 2
         imagesCollection.backgroundColor = UIColor(named: "backgroundColor")
-    
+        
+       name.text = NSLocalizedString("name", comment: "")
+        email.text = NSLocalizedString("email", comment: "")
+       descProfile.text = NSLocalizedString( "descProfile", comment: "")
+       
     }
     
     

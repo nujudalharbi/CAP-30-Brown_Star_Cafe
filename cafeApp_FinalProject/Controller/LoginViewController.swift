@@ -15,8 +15,9 @@ class LoginViewController: UIViewController ,UITextFieldDelegate {
 //-----------------------outlet
     
     @IBOutlet weak var emailLogin: UITextField!
-    
     @IBOutlet weak var passwordLogin: UITextField!
+ 
+    @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var lbStatus: UILabel!
     
     
@@ -29,10 +30,17 @@ class LoginViewController: UIViewController ,UITextFieldDelegate {
         lbStatus.isHidden = true
         emailLogin.delegate = self
         passwordLogin.delegate = self
+        
+//        ------
+        
+        loginBtn.setTitle(NSLocalizedString( "login" , comment: ""), for: .normal)
+
+       lbStatus.text = NSLocalizedString("errorLbl" , comment: "")
+        
     }
     
     
-//    -------------------------------------
+//    ------------------------------------- func storyboard keys 
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == emailLogin{
@@ -44,12 +52,16 @@ class LoginViewController: UIViewController ,UITextFieldDelegate {
         }
         return true
     }
+    
+//    ----------------------------
+    
+    
     @IBAction func loginBtn(_ sender: Any) {
           Login()
                
            }
     
-    
+//    ----------------------------------------
     
     func Login(){
         
@@ -64,13 +76,13 @@ class LoginViewController: UIViewController ,UITextFieldDelegate {
                                self.navigationController?.show(VC, sender: self)
                                print(result?.user.email ?? "")
                                
-                               self.lbStatus.text = "successfully login"
+//                               self.lbStatus.text = "successfully login"
 
                            }else{
                                
                                print(error?.localizedDescription ?? "")
                                self.lbStatus.isHidden = false
-                               self.lbStatus.text = "email or password is wrong"
+//                               self.lbStatus.text = "email or password is wrong"
                                
                            }
                        }

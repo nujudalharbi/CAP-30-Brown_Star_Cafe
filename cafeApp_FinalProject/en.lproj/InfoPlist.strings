@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  cafeApp_FinalProject
+
+  Created by نجود  on 10/06/1443 AH.
+  
+*/
+"CFBundleName" = "Brwon Star Cafe" ;
+"NSCameraUsageDescription" = "App needs to access your camera" ;

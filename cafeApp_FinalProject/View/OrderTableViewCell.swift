@@ -11,10 +11,6 @@ import FirebaseDatabase
 
 
 
-//protocol CellOrder {
-//    func delete(docID: String)
-//
-//}
 
 
 class OrderTableViewCell: UITableViewCell {
@@ -23,8 +19,7 @@ class OrderTableViewCell: UITableViewCell {
     var indext: Int = 0
         let db = Database.database().reference()
         var titleStr = ""
-//        var productObj: products!
-//        var delegate: CellOrder!
+
     
     
     
@@ -32,7 +27,8 @@ class OrderTableViewCell: UITableViewCell {
     
     @IBOutlet weak var viewCellOrder: UIView!
     
-    @IBOutlet weak var viewOrder: UIView!
+
+    @IBOutlet weak var orderImg: UIImageView!
     
     override func awakeFromNib() {
     
@@ -41,15 +37,9 @@ class OrderTableViewCell: UITableViewCell {
         titleOrder.text = titleStr
     }
     @IBOutlet weak var titleOrder: UILabel!
+   
     
-    @IBOutlet weak var FreeOrderLbl: UILabel!
-    
-    
-    
-    @IBAction func deleteBtn(_ sender: Any) {
-//        guard let docID = productObj.id else { return }
-//        delegate.delete(docID: docID)
-    }
+ 
     
 
     
