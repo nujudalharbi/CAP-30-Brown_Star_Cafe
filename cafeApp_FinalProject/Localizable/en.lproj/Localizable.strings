@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  cafeApp_FinalProject
+
+  Created by نجود  on 10/06/1443 AH.
+  
+*/
+
+"changeLanguage" = "English" ;
+"login" = "LogIn";
+
+"signup" = "SignUp";
+"errorLbl" = "email or password is wrong";
+
+"singnBtn" = "SingUp";
+
+"descLbl" = "Wipe QRCode what's on the table " ;
+"click here" = "Click here" ;
+
+"name" = "Name";
+"email"= "Email";
+"descProfile"="If like art coffee ?! Fill your profile your creativity!";

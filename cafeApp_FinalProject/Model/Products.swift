@@ -17,10 +17,11 @@ class Products{
     var qunatity : String = ""
     var status : String? = ""
     var tableNum : String? = ""
+    var payment : String? = ""
 
 //     -------------------------------
     
-    init(title : String? = "",  descrabition : String? = "" , image : String? = "", price : Double? = 0.0, id: String = "", qunatity : String = "", status: String? = ""  , tableNum : String? = ""){
+    init(title : String? = "",  descrabition : String? = "" , image : String? = "", price : Double? = 0.0, id: String = "", qunatity : String = "", status: String? = ""  , tableNum : String? = "" ,  payment : String? = ""){
         self.title = title
         self.descrabition = descrabition
         self.image = image
@@ -29,6 +30,8 @@ class Products{
         self.qunatity = qunatity
         self.status = status
         self.tableNum = tableNum
+        self.payment = payment
+        
     }
 //    -------------------------------
     
@@ -62,4 +65,15 @@ class Products{
         
     }
 
+
+    func getTableNum() -> String{
+        return tableNum!
+        
+    }
+
+    
+    func getPayment() -> String{
+        return payment!
+        
+    }
 }

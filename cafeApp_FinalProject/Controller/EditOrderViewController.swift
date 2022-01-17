@@ -31,7 +31,8 @@ class EditOrderViewController: UIViewController {
     
     @IBOutlet weak var editTitleText: UITextField!
     
- 
+    @IBOutlet weak var editOutlet: UIButton!
+    
     @IBAction func increaseBtn(_ sender: Any) {
         counter += 1
         quantityLbl.text = String (counter)
@@ -81,6 +82,6 @@ class EditOrderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       editOutlet.layer.cornerRadius = editOutlet.frame.height / 2
     }
 }

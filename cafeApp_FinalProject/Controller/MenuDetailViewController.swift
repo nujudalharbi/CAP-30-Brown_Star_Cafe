@@ -75,10 +75,11 @@ class MenuDetailViewController: UIViewController {
         let dbRef = Firestore.firestore()
         
         let tableNum = UserDefaults.standard.string(forKey: "tablenum")
-        
+        let payment = UserDefaults.standard.string(forKey: "payment")
         let orderArray = ["title" : titDetiels.text! ,
                           "noteOrder" : NoteTxt.text! , "qunatity" : quantityLbl.text! , "status" : "open",
-                          "tableNum" : tableNum]
+                          "tableNum" : tableNum,
+                          "payment" : payment ]
         
         dbRef.collection("Orders").addDocument(data: orderArray)
         

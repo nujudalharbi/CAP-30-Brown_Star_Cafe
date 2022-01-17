@@ -56,7 +56,7 @@ class SignUpViewController: UIViewController ,UITextFieldDelegate{
         return true
     }
     
-//    ___________________________
+//    ___________________________________________________________
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -73,14 +73,19 @@ class SignUpViewController: UIViewController ,UITextFieldDelegate{
         lastName.delegate = self
         emailLabel.delegate = self
         passWord.delegate = self
+//        ------
         
         
+      signupBtn.layer.cornerRadius = signupBtn.frame.height / 2
 //        ------
     signupBtn.setTitle(NSLocalizedString( "singnBtn" , comment: ""), for: .normal)
 
       errorLabel.text = NSLocalizedString("errorLbl" , comment: "")
         
     }
+    
+    
+//    --------------------------------------------------
     
     func Register(){
         

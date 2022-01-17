@@ -35,6 +35,7 @@
 		9166860F277D976D0073019C /* StatusOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9166860D277D976D0073019C /* StatusOrderTableViewCell.xib */; };
 		916942A2279061DB00BBA8E4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 916942A4279061DB00BBA8E4 /* Localizable.strings */; };
 		916942A8279071D600BBA8E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 916942AA279071D600BBA8E4 /* InfoPlist.strings */; };
+		916B4F482793267A00342A80 /* PayingOffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B4F472793267A00342A80 /* PayingOffViewController.swift */; };
 		916CEECA2773AD1D00F12D7E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916CEEC92773AD1D00F12D7E /* LoginViewController.swift */; };
 		9177085D277C4FA20062E2D9 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9177085C277C4FA20062E2D9 /* Customer.swift */; };
 		9177569F2782CA5700D70E1A /* TransitionQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9177569E2782CA5700D70E1A /* TransitionQRCodeViewController.swift */; };
@@ -72,6 +73,7 @@
 		916942A5279061DC00BBA8E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		916942A9279071D600BBA8E4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		916942AB279071D800BBA8E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		916B4F472793267A00342A80 /* PayingOffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayingOffViewController.swift; sourceTree = "<group>"; };
 		916CEEC92773AD1D00F12D7E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9177085C277C4FA20062E2D9 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		9177569E2782CA5700D70E1A /* TransitionQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionQRCodeViewController.swift; sourceTree = "<group>"; };
@@ -129,14 +131,21 @@
 				91A15DE927773E4B00DFE1CE /* Model */,
 				91A15DE827773DF100DFE1CE /* View */,
 				91A15DE727773C6500DFE1CE /* Controller */,
-				91513BC1276F830B004FA9D6 /* Assets.xcassets */,
-				91513BC6276F830B004FA9D6 /* Info.plist */,
+				916B4F422792E63400342A80 /* Localizable */,
 				91513BBE276F830A004FA9D6 /* cafeApp_FinalProject.xcdatamodeld */,
 				91513BCC276F8359004FA9D6 /* GoogleService-Info.plist */,
-				916942A4279061DB00BBA8E4 /* Localizable.strings */,
-				916942AA279071D600BBA8E4 /* InfoPlist.strings */,
+				91513BC6276F830B004FA9D6 /* Info.plist */,
 			);
 			path = cafeApp_FinalProject;
+			sourceTree = "<group>";
+		};
+		916B4F422792E63400342A80 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				916942AA279071D600BBA8E4 /* InfoPlist.strings */,
+				916942A4279061DB00BBA8E4 /* Localizable.strings */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 		91A15DE727773C6500DFE1CE /* Controller */ = {
@@ -152,8 +161,9 @@
 				91513C17276FA67E004FA9D6 /* menuTableViewController.swift */,
 				9178BEE3277047AF0043CCA0 /* MenuDetailViewController.swift */,
 				917DE86327767D5F00CB2A88 /* OrderViewController.swift */,
-				9166860A277D963D0073019C /* StatusOrderViewController.swift */,
 				91A15DEA2777410700DFE1CE /* EditOrderViewController.swift */,
+				916B4F472793267A00342A80 /* PayingOffViewController.swift */,
+				9166860A277D963D0073019C /* StatusOrderViewController.swift */,
 				918D5B652770A7F500AF69A6 /* ProfileViewController.swift */,
 			);
 			path = Controller;
@@ -162,6 +172,7 @@
 		91A15DE827773DF100DFE1CE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				91513BC1276F830B004FA9D6 /* Assets.xcassets */,
 				91513C13276FA45C004FA9D6 /* menuTableViewCell.swift */,
 				91513C14276FA45C004FA9D6 /* menuTableViewCell.xib */,
 				91A15DE327773A8B00DFE1CE /* OrderTableViewCell.swift */,
@@ -228,6 +239,7 @@
 				TargetAttributes = {
 					91513BB1276F830A004FA9D6 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -287,6 +299,7 @@
 				9177569F2782CA5700D70E1A /* TransitionQRCodeViewController.swift in Sources */,
 				91513C12276FA3D3004FA9D6 /* Products.swift in Sources */,
 				917DE86427767D5F00CB2A88 /* OrderViewController.swift in Sources */,
+				916B4F482793267A00342A80 /* PayingOffViewController.swift in Sources */,
 				91513BB8276F830A004FA9D6 /* SceneDelegate.swift in Sources */,
 				9178BEE4277047AF0043CCA0 /* MenuDetailViewController.swift in Sources */,
 				91513BC0276F830A004FA9D6 /* cafeApp_FinalProject.xcdatamodeld in Sources */,
@@ -464,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -485,6 +499,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "cafeApp_FinalProject/Controller/cafeApp_FinalProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -495,6 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -516,6 +533,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "cafeApp_FinalProject/Controller/cafeApp_FinalProject-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

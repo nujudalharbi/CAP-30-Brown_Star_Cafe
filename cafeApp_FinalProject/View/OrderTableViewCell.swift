@@ -16,8 +16,8 @@ import FirebaseDatabase
 class OrderTableViewCell: UITableViewCell {
       
     @IBOutlet weak var backgroundCellOrd: UIImageView!
-    var indext: Int = 0
-        let db = Database.database().reference()
+//    var indext: Int = 0
+//        let db = Database.database().reference()
         var titleStr = ""
 
     

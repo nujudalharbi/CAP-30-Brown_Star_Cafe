@@ -13,10 +13,14 @@ class LoginViewController: UIViewController ,UITextFieldDelegate {
     
     
 //-----------------------outlet
+  
+    
+    @IBOutlet weak var desView: UIView!
     
     @IBOutlet weak var emailLogin: UITextField!
     @IBOutlet weak var passwordLogin: UITextField!
  
+
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var lbStatus: UILabel!
     
@@ -33,6 +37,9 @@ class LoginViewController: UIViewController ,UITextFieldDelegate {
         
 //        ------
         
+        loginBtn.layer.cornerRadius = loginBtn.frame.height / 2
+         
+//        -----------
         loginBtn.setTitle(NSLocalizedString( "login" , comment: ""), for: .normal)
 
        lbStatus.text = NSLocalizedString("errorLbl" , comment: "")

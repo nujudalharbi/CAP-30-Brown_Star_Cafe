@@ -19,7 +19,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       loginBtn.layer.cornerRadius = loginBtn.frame.height / 2
         
+      signupBtn.layer.cornerRadius = signupBtn.frame.height / 2
+        
+//        ------------
         languageBtn.setTitle(NSLocalizedString("changeLanguage"  , comment: ""), for: .normal)
         
         loginBtn.setTitle(NSLocalizedString( "login" , comment: ""), for: .normal)

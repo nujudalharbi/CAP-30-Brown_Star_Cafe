@@ -27,6 +27,7 @@ class OrderViewController: UIViewController  , UITableViewDelegate , UITableView
     @IBOutlet weak var tabelView: UITableView!
     
 
+    @IBOutlet weak var checkOutlet: UIButton!
     
 
 //    --------------------------------------------
@@ -39,7 +40,7 @@ class OrderViewController: UIViewController  , UITableViewDelegate , UITableView
         tabelView.delegate = self
         tabelView.dataSource = self
         loadOrders()
-    
+       checkOutlet.layer.cornerRadius = checkOutlet.frame.height / 2
     }
 //    -------------------------
   
@@ -58,8 +59,11 @@ class OrderViewController: UIViewController  , UITableViewDelegate , UITableView
                                       
                                        status: dict["status"] as? String ?? "-")
                 self.orderArr.append(product)
+    
                 self.tabelView.reloadData()
             }
+            
+        
         }
     }
 
@@ -141,9 +145,7 @@ class OrderViewController: UIViewController  , UITableViewDelegate , UITableView
     }
   }
 
-    
-    
-    
+        
     
     
 }
