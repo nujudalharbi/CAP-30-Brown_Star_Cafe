@@ -19,7 +19,7 @@ User stories:
 	
 	•	As a customer , I must check the order so that we can process it.
 	
-	•	As a customer , If you are a fan of the art coffee, you can save the pictures in the file and have it like a CV when we need an employee .
+	•	As a customer , If you are a fan of the art coffee, you can save the pictures in the your profile and have it like a CV when we need an employee .
 	
 Usage :
 
