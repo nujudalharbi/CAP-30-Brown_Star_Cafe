@@ -85,7 +85,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
 
 
    
-   // MARK: UICollectionView
+   //  UICollectionView
    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        imgArray.count
    }
@@ -100,7 +100,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
 //     ---------------------
 
 
-    // MARK: Configuration for UIImagePickerView and UICollectionView
+    // Configuration for UIImagePickerView and UICollectionView
     func configureControls() {
         
         // UIPickerView
@@ -131,19 +131,20 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     
 //    -------------------------------------------------
     
-    // MARK: Download Multiple images from FB and populate in a Collection View
+    //---------- Download Multiple images from FB and populate in a Collection View
     func downloadImagesFromCloud() {
 
     
     
     let storageRef = Storage.storage().reference()
-    let folderRef = storageRef.child("Cloud")
+    let folderRef = storageRef.child("Art")
 
     folderRef.listAll { snapshot, error in
         print (snapshot.items.count)
         
         for (_, item) in snapshot.items.enumerated() {
-            // MARK: Download the image and save it to an array
+            
+            // ----------- Download the image and save it to an array
             item.getData(maxSize: Int64.max) { data, error in
                 guard let data = data else { return }
                 self.imgArray.append(UIImage(data: data)!)
@@ -176,7 +177,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         let randomNumber = Int.random(in: 1...2000)
         
         // Handle for the image path and name to be saved
-        let imgRef = fbStorage.child("Cloud/newimage\(randomNumber).png")
+        let imgRef = fbStorage.child("Art/newimage\(randomNumber).png")
         
         // Put the data into FB and track its progress
         let task = imgRef.putData(data!, metadata: nil) { metaData, error in
@@ -188,17 +189,14 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
             }
         }
         
-        
         task.observe(.success) { snapshot in
             print("complete")
-            // Its UI update, so we must run in main thread
+    
         }
         
         dismiss(animated: true, completion: nil)
     }
 }
-
-
 
 
 //--------------------------------

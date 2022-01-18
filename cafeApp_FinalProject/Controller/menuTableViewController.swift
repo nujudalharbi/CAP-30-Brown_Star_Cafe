@@ -22,14 +22,16 @@ class MenuTableViewController: UITableViewController {
     
     
 
-//    -----------------------------------
-    // TODO: Read from Firestore
+//    -----------------------------------  Read from Firestore
 
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        navigationItem.hidesBackButton = true
+        
+        tableView.register(UINib(nibName: "categoryTableViewCell", bundle: .main), forCellReuseIdentifier: "topID")
         
         tableView.register(UINib(nibName : "menuTableViewCell", bundle : nil ) ,forCellReuseIdentifier: "ProductID")
         tableView.rowHeight = 180
@@ -46,8 +48,7 @@ class MenuTableViewController: UITableViewController {
                         let desc = object["descrabition"] as? String
                         let status = object["status"] as? String
                         
-                        let pro = Products(title: tit, descrabition: desc, image: img, price: price,
-                                           status: status)
+                        let pro = Products(title: tit, descrabition: desc, image: img, price: price , status: status)
                         self.productList.append(pro)
                         
                         self.tableView.reloadData()
@@ -66,7 +67,11 @@ class MenuTableViewController: UITableViewController {
 
     
 //  ------------------------------- func delegate 
-
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+          return 1
+          
+      }
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
@@ -75,7 +80,21 @@ class MenuTableViewController: UITableViewController {
     
 //    -----------------------
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductID")as! menuTableViewCell
+        
+                if indexPath.row == 0 {
+                           let cellTop =
+                           tableView.dequeueReusableCell(withIdentifier: "topID") as! categoryTableViewCell
+              
+                    
+
+                    
+                    return cellTop
+                
+                         
+                       }
+        
+        
+            else { let cell = tableView.dequeueReusableCell(withIdentifier: "ProductID")as! menuTableViewCell
         let pro : Products
         pro = productList[indexPath.row]
         if let imageName = pro.image {
@@ -89,19 +108,25 @@ class MenuTableViewController: UITableViewController {
             }.resume()
         }
         cell.titleProduct.text = pro.title
-//        layout cell and image
+                
+                
+//  ----------------      layout cell and image
         
         cell.viewCell.layer.cornerRadius = cell.viewCell.frame.height / 2
-//        cell.imagesProduct.layer.cornerRadius = cell.imagesProduct.frame.height / 2
+
         cell.backgroundCellImg.layer.cornerRadius = cell.backgroundCellImg.frame.height / 2
         return cell
-       
+        }
     }
+    
+    
+    
 //    -------------------
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let VC = storyboard?.instantiateViewController(withIdentifier: "DetileID") as! MenuDetailViewController
-
+        
+       
         let selectedCell = tableView.cellForRow(at: indexPath) as! menuTableViewCell
         
         VC.titleCoffee = productList[indexPath.row].getTitle()

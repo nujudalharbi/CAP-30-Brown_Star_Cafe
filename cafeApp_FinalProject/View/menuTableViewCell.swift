@@ -8,11 +8,18 @@
 import UIKit
 
 class menuTableViewCell: UITableViewCell {
-
+    
+    
+//------------------ outlet
+    
     @IBOutlet weak var backgroundCellImg: UIImageView!
     @IBOutlet weak var viewCell: UIView!
     @IBOutlet weak var titleProduct: UILabel!
     @IBOutlet weak var imagesProduct: UIImageView!
+//    -----------------
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

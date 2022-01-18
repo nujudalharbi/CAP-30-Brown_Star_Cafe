@@ -6,22 +6,19 @@
 //
 
 import UIKit
-import FirebaseFirestore
-import FirebaseDatabase
+
 
 
 
 
 
 class OrderTableViewCell: UITableViewCell {
+    
+    
+    var titleStr = ""
+//    ------------------------------------
       
     @IBOutlet weak var backgroundCellOrd: UIImageView!
-//    var indext: Int = 0
-//        let db = Database.database().reference()
-        var titleStr = ""
-
-    
-    
     
     @IBOutlet weak var qauntityLbl: UILabel!
     
@@ -30,15 +27,15 @@ class OrderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var orderImg: UIImageView!
     
+    @IBOutlet weak var titleOrder: UILabel!
+   
+// ---------------------------------------------
     override func awakeFromNib() {
     
         super.awakeFromNib()
         // Initialization code
         titleOrder.text = titleStr
     }
-    @IBOutlet weak var titleOrder: UILabel!
-   
-    
  
     
 

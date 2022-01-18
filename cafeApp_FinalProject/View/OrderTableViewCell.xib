@@ -23,15 +23,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 1443-05-27 at 6.54.34 PM" translatesAutoresizingMaskIntoConstraints="NO" id="9Mx-7l-iKj">
                                 <rect key="frame" x="5" y="5" width="290" height="75"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk7-1i-zP6">
-                                <rect key="frame" x="0.0" y="22" width="37" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="37" id="eIm-P7-sST"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="30"/>
-                                <color key="textColor" red="0.5" green="0.20994487581261495" blue="0.214607838540403" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9n-RJ-G2T">
                                 <rect key="frame" x="74" y="32" width="164" height="33"/>
                                 <constraints>
@@ -41,13 +32,22 @@
                                 <color key="textColor" red="0.5288920157" green="0.44683249860000002" blue="0.3294666202" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk7-1i-zP6">
+                                <rect key="frame" x="0.0" y="27" width="37" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="eIm-P7-sST"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="30"/>
+                                <color key="textColor" red="0.5" green="0.20994487581261495" blue="0.214607838540403" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9Mx-7l-iKj" firstAttribute="leading" secondItem="7Nu-ch-wel" secondAttribute="leading" constant="5" id="83M-bP-QpI"/>
-                            <constraint firstItem="Uk7-1i-zP6" firstAttribute="top" secondItem="7Nu-ch-wel" secondAttribute="top" constant="22" id="Jpy-36-8nG"/>
+                            <constraint firstItem="Uk7-1i-zP6" firstAttribute="top" secondItem="7Nu-ch-wel" secondAttribute="top" constant="27" id="Jpy-36-8nG"/>
                             <constraint firstAttribute="trailing" secondItem="9Mx-7l-iKj" secondAttribute="trailing" constant="5" id="Mdk-tH-Wnh"/>
-                            <constraint firstItem="Uk7-1i-zP6" firstAttribute="centerY" secondItem="a9n-RJ-G2T" secondAttribute="centerY" constant="-5" id="OZB-df-QU1"/>
+                            <constraint firstItem="Uk7-1i-zP6" firstAttribute="centerY" secondItem="a9n-RJ-G2T" secondAttribute="centerY" id="OZB-df-QU1"/>
                             <constraint firstAttribute="trailing" secondItem="Uk7-1i-zP6" secondAttribute="trailing" constant="263" id="Xom-ha-2Xi"/>
                             <constraint firstAttribute="bottomMargin" secondItem="a9n-RJ-G2T" secondAttribute="bottom" constant="12" id="d44-PL-rEb"/>
                             <constraint firstItem="a9n-RJ-G2T" firstAttribute="leading" secondItem="7Nu-ch-wel" secondAttribute="leadingMargin" constant="66" id="euB-Fy-2Eb"/>

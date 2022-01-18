@@ -13,27 +13,49 @@ class PayingOffViewController: UIViewController {
     
     
     let dbStore = Firestore.firestore()
-
+    var isChangeimgOfBtn = false
+//----------------------------------
     
+    
+    @IBOutlet weak var cashBtnOutlet: UIButton!
+    
+    @IBOutlet weak var paymentBtnOutlet: UIButton!
+    
+    
+//    ---------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+    
+               
+          
         // Do any additional setup after loading the view.
     }
     
-  
+//  ----------------------
+    
     @IBAction func cashBtn(_ sender: Any) {
-//
-//        let doc = dbStore.collection("Orders").document()
-//        doc.updateData(["payment": "cash" ])
-        UserDefaults.standard.string(forKey: "payment")
+        
+        if isChangeimgOfBtn {
+            isChangeimgOfBtn = false
+            cashBtnOutlet.setImage(UIImage(named: "circle") , for : .normal)
+            
+        }
+        
+        else{
+            
+            if isChangeimgOfBtn {
+                isChangeimgOfBtn = true
+                cashBtnOutlet.setImage(UIImage(named: "circle.fill") , for : .normal)
+                
+        }
+        
+       UserDefaults.standard.string(forKey: "payment")
         writeToFirestore(payment: "Cash")
     }
-    @IBAction func PaymentNetworkBtn(_ sender: Any) {
-//
-//        let doc = dbStore.collection("Orders").document()
-//        doc.updateData(["payment": "PaymentNetwork" ])
-        UserDefaults.standard.string(forKey: "payment")
+        
+   
+        func PaymentNetworkBtn(_ sender: Any) {
+      UserDefaults.standard.string(forKey: "payment")
         writeToFirestore(payment:  "PaymentNetwork")
     }
     
@@ -44,4 +66,5 @@ class PayingOffViewController: UIViewController {
         doc.updateData(["payment" :  payment ])
 //
     }
+}
 }

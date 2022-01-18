@@ -33,6 +33,10 @@ class TransitionQRCodeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        navigationItem.hidesBackButton = true
+        
         descLbl.text = NSLocalizedString("descLbl" , comment: "")
         clickLbl.text = NSLocalizedString("click here" , comment: "")
          

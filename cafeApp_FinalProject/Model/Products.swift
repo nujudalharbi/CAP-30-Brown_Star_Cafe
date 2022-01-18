@@ -21,7 +21,7 @@ class Products{
 
 //     -------------------------------
     
-    init(title : String? = "",  descrabition : String? = "" , image : String? = "", price : Double? = 0.0, id: String = "", qunatity : String = "", status: String? = ""  , tableNum : String? = "" ,  payment : String? = ""){
+    init(title : String? = "",  descrabition : String? = "" , image : String? = "", price : Double? = 0.0 , id: String = "", qunatity : String = "", status: String? = ""  , tableNum : String? = "" ,  payment : String? = ""){
         self.title = title
         self.descrabition = descrabition
         self.image = image

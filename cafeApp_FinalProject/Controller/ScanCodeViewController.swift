@@ -66,6 +66,7 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
         }
     }
     
+//    -----------------------
     
     
     let dbStore = Firestore.firestore()
