@@ -160,7 +160,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     
     
 //    ------------------------------
-    // MARK: Handle ImagePicker Delegate and Upload the captured image to FB Storage
+    // ---------- Handle ImagePicker Delegate and Upload the captured image to FB Storage
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         // Load the image into imageview

@@ -64,7 +64,16 @@ class LoginViewController: UIViewController ,UITextFieldDelegate {
     
     
     @IBAction func loginBtn(_ sender: Any) {
+        
+        
+        if emailLogin.text == "nn@n.com"
+        {
+            let VC = self.storyboard?.instantiateViewController(withIdentifier: "adminID") as! AdminViewController
+            self.navigationController?.show(VC, sender: self)
+            
+        }else{
           Login()
+        }
                
            }
     

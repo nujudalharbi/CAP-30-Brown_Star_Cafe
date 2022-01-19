@@ -56,7 +56,6 @@ class OrderViewController: UIViewController  , UITableViewDelegate , UITableView
                                        price: dict["price"] as? Double ?? 0.0,
                                        id: doc.documentID,
                                        qunatity: dict["qunatity"] as? String ?? "" ,
-                                      
                                        status: dict["status"] as? String ?? "-")
                 self.orderArr.append(product)
     
@@ -81,19 +80,7 @@ class OrderViewController: UIViewController  , UITableViewDelegate , UITableView
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "orderID") as! OrderTableViewCell
 
-//         let pro : Products
-//         pro = orderArr[indexPath.row]
-//         if let imageName = pro.image {
-//             let url = URL(string: imageName)
-//             URLSession.shared.dataTask(with: url! ) { (data, _, _) in
-//                 if let data = data {
-//                     DispatchQueue.main.async {
-//                         cell.orderImg.image = UIImage(data: data)
-//                     }
-//                 }
-//             }.resume()
-//         }
-//         
+
          
          
          
@@ -117,9 +104,11 @@ class OrderViewController: UIViewController  , UITableViewDelegate , UITableView
     }
  
     @IBAction func closeOrderBtn(_ sender: Any) {
+    
         for order in orderArr {
+          
             let docRef = dbStore.collection("Orders").document(order.getID())
-            docRef.updateData(["status" : "closed"])
+            docRef.updateData(["status" : "closed"  ])
           
         }
     }

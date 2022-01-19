@@ -11,8 +11,8 @@ class Products{
     
     var title : String?
     var descrabition : String?
-    var image : String?
-    var price : Double?
+    var image : String? = ""
+    var price : Double? = 0.0
     var id : String? = ""
     var qunatity : String = ""
     var status : String? = ""
@@ -21,7 +21,9 @@ class Products{
 
 //     -------------------------------
     
-    init(title : String? = "",  descrabition : String? = "" , image : String? = "", price : Double? = 0.0 , id: String = "", qunatity : String = "", status: String? = ""  , tableNum : String? = "" ,  payment : String? = ""){
+    init(title : String? = "",  descrabition : String? = "" , image : String? = "", price : Double? = 0.0
+         , id: String = "", qunatity : String = "", status: String? = ""  , tableNum : String? = "" ,  payment : String? = ""
+    ){
         self.title = title
         self.descrabition = descrabition
         self.image = image
@@ -49,31 +51,31 @@ class Products{
         
     }
     func getPrice () -> Double {
-        return price!
+        return price ?? 0.0
         
-    }
+   }
     func getID() -> String{
         return id!
-        
+
     }
     func getQunatity() -> String{
         return qunatity
-        
+
     }
     func getStatus() -> String{
         return status!
-        
+
     }
 
 
     func getTableNum() -> String{
         return tableNum!
-        
+
     }
 
-    
+
     func getPayment() -> String{
         return payment!
-        
+
     }
 }

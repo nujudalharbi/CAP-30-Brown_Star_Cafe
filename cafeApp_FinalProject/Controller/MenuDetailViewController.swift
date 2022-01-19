@@ -25,7 +25,6 @@ class MenuDetailViewController: UIViewController {
 
     
     
-    
    
 
     
@@ -72,14 +71,17 @@ class MenuDetailViewController: UIViewController {
     
     @IBAction func addBtn(_ sender: Any) {
         
+        addOrder()
+    }
+    func addOrder(){
         let dbRef = Firestore.firestore()
         
         let tableNum = UserDefaults.standard.string(forKey: "tablenum")
-        let payment = UserDefaults.standard.string(forKey: "payment")
+      let payment = UserDefaults.standard.string(forKey: "payment")
         let orderArray = ["title" : titDetiels.text! ,
                           "noteOrder" : NoteTxt.text! , "qunatity" : quantityLbl.text! , "status" : "open",
-                          "tableNum" : tableNum,
-                          "payment" : payment ]
+                          "tableNum" : tableNum ,  "payment" : payment
+                         ]
         
         dbRef.collection("Orders").addDocument(data: orderArray)
         
@@ -91,6 +93,14 @@ class MenuDetailViewController: UIViewController {
 //    ---------------------------
     
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == NoteTxt {
+        addOrder()
+            
+        }
+        return true
+    }
+//    -------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,5 +120,7 @@ class MenuDetailViewController: UIViewController {
         
         
         NoteTxt.backgroundColor = UIColor.white
+        
+ 
     }
 }

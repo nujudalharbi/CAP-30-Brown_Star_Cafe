@@ -24,19 +24,16 @@
                                 <rect key="frame" x="5" y="5" width="290" height="75"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9n-RJ-G2T">
-                                <rect key="frame" x="74" y="32" width="164" height="33"/>
+                                <rect key="frame" x="91" y="32" width="192" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="164" id="r4m-X4-ind"/>
+                                    <constraint firstAttribute="width" constant="192" id="r4m-X4-ind"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="27"/>
                                 <color key="textColor" red="0.5288920157" green="0.44683249860000002" blue="0.3294666202" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk7-1i-zP6">
-                                <rect key="frame" x="0.0" y="27" width="37" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="37" id="eIm-P7-sST"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="27" width="36" height="43"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="30"/>
                                 <color key="textColor" red="0.5" green="0.20994487581261495" blue="0.214607838540403" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -45,15 +42,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9Mx-7l-iKj" firstAttribute="leading" secondItem="7Nu-ch-wel" secondAttribute="leading" constant="5" id="83M-bP-QpI"/>
-                            <constraint firstItem="Uk7-1i-zP6" firstAttribute="top" secondItem="7Nu-ch-wel" secondAttribute="top" constant="27" id="Jpy-36-8nG"/>
+                            <constraint firstItem="Uk7-1i-zP6" firstAttribute="leading" secondItem="7Nu-ch-wel" secondAttribute="leading" id="DaB-T2-t23"/>
+                            <constraint firstItem="a9n-RJ-G2T" firstAttribute="leading" secondItem="Uk7-1i-zP6" secondAttribute="trailing" constant="55" id="HbS-k1-CUe"/>
                             <constraint firstAttribute="trailing" secondItem="9Mx-7l-iKj" secondAttribute="trailing" constant="5" id="Mdk-tH-Wnh"/>
-                            <constraint firstItem="Uk7-1i-zP6" firstAttribute="centerY" secondItem="a9n-RJ-G2T" secondAttribute="centerY" id="OZB-df-QU1"/>
-                            <constraint firstAttribute="trailing" secondItem="Uk7-1i-zP6" secondAttribute="trailing" constant="263" id="Xom-ha-2Xi"/>
+                            <constraint firstItem="Uk7-1i-zP6" firstAttribute="centerY" secondItem="a9n-RJ-G2T" secondAttribute="centerY" id="ZEl-1x-5HD"/>
                             <constraint firstAttribute="bottomMargin" secondItem="a9n-RJ-G2T" secondAttribute="bottom" constant="12" id="d44-PL-rEb"/>
-                            <constraint firstItem="a9n-RJ-G2T" firstAttribute="leading" secondItem="7Nu-ch-wel" secondAttribute="leadingMargin" constant="66" id="euB-Fy-2Eb"/>
+                            <constraint firstItem="a9n-RJ-G2T" firstAttribute="leading" secondItem="7Nu-ch-wel" secondAttribute="leadingMargin" constant="83" id="euB-Fy-2Eb"/>
                             <constraint firstAttribute="centerY" secondItem="a9n-RJ-G2T" secondAttribute="centerY" constant="-6" id="jtB-E2-x0o"/>
                             <constraint firstAttribute="bottom" secondItem="9Mx-7l-iKj" secondAttribute="bottom" constant="5" id="nLd-ZA-smL"/>
                             <constraint firstItem="9Mx-7l-iKj" firstAttribute="top" secondItem="7Nu-ch-wel" secondAttribute="top" constant="5" id="nUt-yo-yzY"/>
+                            <constraint firstItem="Uk7-1i-zP6" firstAttribute="top" secondItem="7Nu-ch-wel" secondAttribute="top" constant="27" id="ssm-hS-cPX"/>
                         </constraints>
                     </view>
                 </subviews>

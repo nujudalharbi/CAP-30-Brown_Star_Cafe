@@ -8,8 +8,6 @@
 import UIKit
 
 import FirebaseFirestore
-import FirebaseDatabase
-import Firebase
 
 
 class EditOrderViewController: UIViewController {
@@ -58,10 +56,10 @@ class EditOrderViewController: UIViewController {
 
    
               
-        let washingtonRef = dbStore.collection("Orders").document(selectedOrder.id!)
+        let orderRef = dbStore.collection("Orders").document(selectedOrder.id!)
 
     
-        washingtonRef.updateData(["title" :editTitleText.text
+        orderRef.updateData(["title" :editTitleText.text
         ,"qunatity": quantityLbl.text
     ]) { err in
         if let err = err {

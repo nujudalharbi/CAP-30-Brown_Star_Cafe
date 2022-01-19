@@ -29,13 +29,13 @@ class MenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.hidesBackButton = true
+      
         
         tableView.register(UINib(nibName: "categoryTableViewCell", bundle: .main), forCellReuseIdentifier: "topID")
         
         tableView.register(UINib(nibName : "menuTableViewCell", bundle : nil ) ,forCellReuseIdentifier: "ProductID")
         tableView.rowHeight = 180
-
+       
         dbStore.collection("products").addSnapshotListener { snapshot, error in
             
             guard let docs = snapshot?.documents else { return }
@@ -48,8 +48,11 @@ class MenuTableViewController: UITableViewController {
                         let desc = object["descrabition"] as? String
                         let status = object["status"] as? String
                         
-                        let pro = Products(title: tit, descrabition: desc, image: img, price: price , status: status)
+                        let pro = Products(title: tit, descrabition: desc, image: img, price: price
+                                           , status: status)
                         self.productList.append(pro)
+                        
+                        
                         
                         self.tableView.reloadData()
                         print(doc.data())
@@ -60,7 +63,7 @@ class MenuTableViewController: UITableViewController {
 
         }
         
-        
+     
     }
 
 
@@ -94,20 +97,23 @@ class MenuTableViewController: UITableViewController {
                        }
         
         
-            else { let cell = tableView.dequeueReusableCell(withIdentifier: "ProductID")as! menuTableViewCell
-        let pro : Products
-        pro = productList[indexPath.row]
-        if let imageName = pro.image {
-            let url = URL(string: imageName)
-            URLSession.shared.dataTask(with: url!) { (data, _, _) in
-                if let data = data {
-                    DispatchQueue.main.async {
-                        cell.imagesProduct.image = UIImage(data: data)
+            else {
+    
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ProductID")as! menuTableViewCell
+                let pro : Products
+                pro = productList[indexPath.row - 1]
+                if let imageName = pro.image {
+                    if let url = URL(string: imageName) {
+                        URLSession.shared.dataTask(with: url) { (data, _, _) in
+                            if let data = data {
+                                DispatchQueue.main.async {
+                                    cell.imagesProduct.image = UIImage(data: data)
+                                }
+                            }
+                        }.resume()
                     }
                 }
-            }.resume()
-        }
-        cell.titleProduct.text = pro.title
+                cell.titleProduct.text = pro.title
                 
                 
 //  ----------------      layout cell and image
