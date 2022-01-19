@@ -20,3 +20,10 @@
 "name" = "Name";
 "email"= "Email";
 "descProfile"="If like art coffee ?! Fill your profile your creativity!";
+
+
+"nameProduct" = "Name of Product";
+"descProduct" = "Descraption";
+"PriceProduct" = "Price";
+"addProduct" = "Add Product";
+

@@ -31,8 +31,6 @@ class MenuTableViewController: UITableViewController {
         
       
         
-        tableView.register(UINib(nibName: "categoryTableViewCell", bundle: .main), forCellReuseIdentifier: "topID")
-        
         tableView.register(UINib(nibName : "menuTableViewCell", bundle : nil ) ,forCellReuseIdentifier: "ProductID")
         tableView.rowHeight = 180
        
@@ -44,7 +42,7 @@ class MenuTableViewController: UITableViewController {
                     if (object.count > 0) {
                         let tit = object["title"] as? String
                         let img = object["image"] as? String
-                        let price = object["price"] as? Double
+                        let price = object["price"] as? String
                         let desc = object["descrabition"] as? String
                         let status = object["status"] as? String
                         
@@ -71,10 +69,7 @@ class MenuTableViewController: UITableViewController {
     
 //  ------------------------------- func delegate 
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-          return 1
-          
-      }
+
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
@@ -84,24 +79,10 @@ class MenuTableViewController: UITableViewController {
 //    -----------------------
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-                if indexPath.row == 0 {
-                           let cellTop =
-                           tableView.dequeueReusableCell(withIdentifier: "topID") as! categoryTableViewCell
-              
-                    
-
-                    
-                    return cellTop
-                
-                         
-                       }
-        
-        
-            else {
     
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ProductID")as! menuTableViewCell
                 let pro : Products
-                pro = productList[indexPath.row - 1]
+                pro = productList[indexPath.row ]
                 if let imageName = pro.image {
                     if let url = URL(string: imageName) {
                         URLSession.shared.dataTask(with: url) { (data, _, _) in
@@ -122,7 +103,7 @@ class MenuTableViewController: UITableViewController {
 
         cell.backgroundCellImg.layer.cornerRadius = cell.backgroundCellImg.frame.height / 2
         return cell
-        }
+
     }
     
     

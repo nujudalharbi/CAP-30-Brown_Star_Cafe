@@ -34,7 +34,7 @@ class StatusOrderController: UIViewController , UITableViewDelegate , UITableVie
                 let product = Products(title: dict["title"] as? String ?? "",
                                        descrabition: dict["noteOrder"] as? String ?? "",
                                        image: dict["image"] as? String ?? "",
-                                       price: dict["price"] as? Double ?? 0.0,
+                                       price: dict["price"] as? String ?? "",
                                        id: doc.documentID,
                                        status: dict["status"] as? String ?? "")
                 self.orderArr.append(product)

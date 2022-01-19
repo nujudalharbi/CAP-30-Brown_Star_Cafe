@@ -12,7 +12,7 @@ class Products{
     var title : String?
     var descrabition : String?
     var image : String? = ""
-    var price : Double? = 0.0
+    var price : String? = ""
     var id : String? = ""
     var qunatity : String = ""
     var status : String? = ""
@@ -21,7 +21,7 @@ class Products{
 
 //     -------------------------------
     
-    init(title : String? = "",  descrabition : String? = "" , image : String? = "", price : Double? = 0.0
+    init(title : String? = "",  descrabition : String? = "" , image : String? = "", price :String? = ""
          , id: String = "", qunatity : String = "", status: String? = ""  , tableNum : String? = "" ,  payment : String? = ""
     ){
         self.title = title
@@ -50,8 +50,8 @@ class Products{
         return image!
         
     }
-    func getPrice () -> Double {
-        return price ?? 0.0
+    func getPrice () -> String {
+        return price ?? ""
         
    }
     func getID() -> String{

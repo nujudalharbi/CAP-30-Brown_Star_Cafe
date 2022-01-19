@@ -16,7 +16,7 @@ class MenuDetailViewController: UIViewController {
 //    ---------------- declear a varible
     var titleCoffee = ""
     var descriptionCoffee  = ""
-    var priceCoffee = 0.0
+    var priceCoffee = ""
     var counter = 0
     
     

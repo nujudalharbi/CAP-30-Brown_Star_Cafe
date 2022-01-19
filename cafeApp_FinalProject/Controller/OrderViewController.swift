@@ -53,7 +53,7 @@ class OrderViewController: UIViewController  , UITableViewDelegate , UITableView
                 let product = Products(title: dict["title"] as? String ?? "",
                                        descrabition: dict["noteOrder"] as? String ?? "",
                                        image: dict["image"] as? String ?? "",
-                                       price: dict["price"] as? Double ?? 0.0,
+                                       price: dict["price"] as? String ?? "",
                                        id: doc.documentID,
                                        qunatity: dict["qunatity"] as? String ?? "" ,
                                        status: dict["status"] as? String ?? "-")

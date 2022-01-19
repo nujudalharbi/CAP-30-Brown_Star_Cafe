@@ -11,12 +11,19 @@ class AdminViewController: UIViewController   , UIImagePickerControllerDelegate 
 
     
     let picker = UIImagePickerController()
+    
+    
+    @IBOutlet weak var titleLbl: UILabel!
+    
     @IBOutlet weak var productTit: UITextField!
     
     
-  
-    @IBOutlet weak var productDes: UITextView!
+    @IBOutlet weak var descLbl: UILabel!
     
+  
+    
+    @IBOutlet weak var productDes: UITextField!
+    @IBOutlet weak var priceLbl: UILabel!
     
     
     @IBOutlet weak var productPrice: UITextField!
@@ -24,6 +31,7 @@ class AdminViewController: UIViewController   , UIImagePickerControllerDelegate 
     @IBOutlet weak var productImg: UIImageView!
     
   
+    @IBOutlet weak var addBtn: UIButton!
     
     @IBAction func addProduct(_ sender: Any) {
         
@@ -63,7 +71,14 @@ class AdminViewController: UIViewController   , UIImagePickerControllerDelegate 
         picker.title = "Choose Image"
         
         downloadImagesFromCloud()
+        
+        
+        addBtn.setTitle(NSLocalizedString( "addProduct" , comment: ""), for: .normal)
 
+       titleLbl.text = NSLocalizedString("nameProduct" , comment: "")
+        descLbl.text = NSLocalizedString("descProduct" , comment: "")
+       priceLbl.text = NSLocalizedString("PriceProduct" , comment: "")
+        
         // Do any additional setup after loading the view.
     }
   

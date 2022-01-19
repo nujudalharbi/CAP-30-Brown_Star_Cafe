@@ -25,7 +25,6 @@ class OrderTableViewCell: UITableViewCell {
     @IBOutlet weak var viewCellOrder: UIView!
     
 
-    @IBOutlet weak var orderImg: UIImageView!
     
     @IBOutlet weak var titleOrder: UILabel!
    
