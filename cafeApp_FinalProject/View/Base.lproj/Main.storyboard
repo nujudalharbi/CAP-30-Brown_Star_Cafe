@@ -331,7 +331,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="A6W-Nn-JTK">
                                 <rect key="frame" x="60" y="442" width="294" height="194.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nn1@n.com" borderStyle="roundedRect" placeholder="Enter your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oaA-oz-eeW">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nn@n.com" borderStyle="roundedRect" placeholder="Enter your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oaA-oz-eeW">
                                         <rect key="frame" x="0.0" y="0.0" width="294" height="34"/>
                                         <color key="textColor" name="Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>

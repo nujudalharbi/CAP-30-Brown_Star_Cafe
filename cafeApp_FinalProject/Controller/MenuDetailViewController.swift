@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class MenuDetailViewController: UIViewController {
+class MenuDetailViewController: UIViewController  , UITextFieldDelegate {
     
     
     
@@ -105,7 +105,8 @@ class MenuDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+    NoteTxt.delegate = self
+     
         titDetiels.text = titleCoffee
     
         DescDetiels.text = descriptionCoffee

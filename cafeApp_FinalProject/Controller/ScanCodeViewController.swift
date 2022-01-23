@@ -15,7 +15,7 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
     
 
     var video = AVCaptureVideoPreviewLayer()
-
+//  declear var set the input of the AVCaptureSession object to the approprate AVCaptureDevice for video capture
     let session = AVCaptureSession()
 
     override func viewDidLoad() {
@@ -26,13 +26,15 @@ class ScanCodeViewController: UIViewController , AVCaptureMetadataOutputObjectsD
         do{
 //     1    define capture device
             guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else { return  }
-            
+//             get an instance of the AVCaptureDeviceInput class using the previous device  object
           let input = try AVCaptureDeviceInput(device : captureDevice)
+//             set the input device on the capture session
             session.addInput(input)
             
             
         }
         catch{
+//            if any error occurs , simply print it out and don't continue any more
             print("error")
         }
         

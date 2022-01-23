@@ -10,7 +10,7 @@ import UIKit
 import FirebaseFirestore
 
 
-class EditOrderViewController: UIViewController {
+class EditOrderViewController: UIViewController , UITextFieldDelegate  {
     
     
     
@@ -80,6 +80,17 @@ class EditOrderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        editTitleText.delegate = self
        editOutlet.layer.cornerRadius = editOutlet.frame.height / 2
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == editTitleText {
+        edit()
+            
+        }
+        return true
     }
 }

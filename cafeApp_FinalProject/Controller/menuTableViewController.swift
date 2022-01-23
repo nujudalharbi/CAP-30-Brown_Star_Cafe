@@ -15,7 +15,7 @@ class MenuTableViewController: UITableViewController {
 //    ------------------- declear a varible
 
     var productList  =  [ Products ]()
-    var refProduct : DatabaseReference!
+//    var refProduct : DatabaseReference!
     let dbStore = Firestore.firestore()
     
     
